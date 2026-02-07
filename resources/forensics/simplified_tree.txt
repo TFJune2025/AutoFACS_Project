@@ -184,7 +184,6 @@
 │   │       ├── SBDC Guide to Entrepreneurship.pdf
 │   │       ├── To Do List.xlsx
 │   │       └── To Do Running List.docx
-│   └── Research_Archive
 │       ├── 1. K013317_PPM - IG - Structure and Resources.pdf
 │       ├── 2. K013321_PPM - IG - Communications.pdf
 │       ├── 2016 KM Conference Presentation Slides (APQC).pdf

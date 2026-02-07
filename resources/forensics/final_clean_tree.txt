@@ -7,7 +7,6 @@
 │   │   ├── AutoFACS_Project
 │   │   ├── FACS_Automation
 │   │   └── Learning Platform
-│   └── Research_Archive
 │       ├── 2021-present KM
 │       ├── 2023 Balsa Wood Bridge Competition
 │       ├── 2024-2025 Recipes

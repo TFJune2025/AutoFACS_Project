@@ -43,7 +43,6 @@
 │   │   ├── AutoFACS_Project
 │   │   ├── FACS_Automation
 │   │   └── Learning Platform
-│   └── Research_Archive
 ├── DATA_LAKE_MANIFEST_V41.csv
 ├── graveyard
 │   ├── =2.8

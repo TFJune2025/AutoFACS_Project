@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-MANIFEST_PATH = 'DATA_LAKE_MANIFEST_V41.csv'
+MANIFEST_PATH = os.path.join('manifests', 'inventories', 'DATA_LAKE_MANIFEST_V41.csv')
 
 def verify_heartbeat():
     print(f"🚀 Initializing Resilient Heartbeat Check...")
