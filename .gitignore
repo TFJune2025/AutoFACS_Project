@@ -29,3 +29,4 @@ wandb/
 .DS_Store
 !DATA_LAKE_MANIFEST_V41.csv
 /DATA_LAKE_MANIFEST_V41.csv
+data_lake/Research_Archive/

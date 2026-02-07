@@ -7,3 +7,4 @@ notebooks/setup/
 logs/
 .DS_Store
 __pycache__/
+data_lake/Research_Archive/
