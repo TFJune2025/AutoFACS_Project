@@ -1,0 +1,5 @@
+outs:
+- md5: 71c1b5d8e99ccc4019859fd81625b425
+  size: 410379316
+  hash: md5
+  path: DATA_LAKE_MANIFEST_V41.csv

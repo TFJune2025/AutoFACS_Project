@@ -28,3 +28,4 @@ configs/settings_local.py
 wandb/
 .DS_Store
 !DATA_LAKE_MANIFEST_V41.csv
+/DATA_LAKE_MANIFEST_V41.csv
