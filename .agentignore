@@ -5,6 +5,7 @@ resources/infrastructure/linux_drivers/
 **/archive_v1_v41/
 notebooks/setup/
 logs/
+._*
 .DS_Store
 __pycache__/
 data_lake/Research_Archive/

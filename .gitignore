@@ -2,6 +2,7 @@ data_lake/Research_Archive/
 gdrive/
 data/
 models/
+._*
 .DS_Store
 __pycache__/
 logs/
