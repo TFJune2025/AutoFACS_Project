@@ -1,0 +1,47 @@
+.
+├── configs
+│   ├── envs
+│   └── scraping
+├── data_lake
+│   ├── AutoAI_Projects
+│   │   ├── AutoFACS_Project
+│   │   ├── FACS_Automation
+│   │   └── Learning Platform
+│   └── Research_Archive
+│       ├── 2021-present KM
+│       ├── 2023 Balsa Wood Bridge Competition
+│       ├── 2024-2025 Recipes
+│       ├── 2027 Family Plans
+│       ├── Auto Call Recorder
+│       ├── Certs
+│       ├── EE Learning
+│       ├── Girls Learning
+│       ├── macos, etc
+│       ├── Saved from Chrome
+│       └── Work docs
+├── graveyard
+│   └── Google Gemini_files
+├── logs
+├── notebooks
+│   ├── analysis
+│   ├── curation
+│   ├── flywheel
+│   ├── inference
+│   ├── scraping
+│   ├── setup
+│   └── training
+│       ├── gatekeeper
+│       ├── supervised
+│       └── unsupervised
+├── resources
+│   ├── docs
+│   └── infrastructure
+│       └── linux_drivers
+├── src
+│   ├── agent
+│   ├── discovery
+│   └── synthesis
+├── tests
+└── tools
+
+45 directories

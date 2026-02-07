@@ -1,0 +1,9 @@
+graveyard/
+resources/infrastructure/linux_drivers/
+**/*.svg
+**/*.js
+**/archive_v1_v41/
+notebooks/setup/
+logs/
+.DS_Store
+__pycache__/

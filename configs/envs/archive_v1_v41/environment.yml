@@ -1,0 +1,23 @@
+name: ml_expressions
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - jupyterlab
+  - pytorch
+  - torchvision
+  - cudatoolkit
+  - tensorflow
+  - ipykernel
+  - pip:
+      - accelerate
+      - transformers
+      - datasets
+      - opencv-python
+      - pytorch-metric-learning

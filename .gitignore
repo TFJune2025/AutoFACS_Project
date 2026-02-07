@@ -1,0 +1,30 @@
+data_lake/Research_Archive/
+gdrive/
+data/
+models/
+.DS_Store
+__pycache__/
+logs/
+.env
+# Ignore all files in data_lake
+data_lake/*
+# But allow python scripts
+!data_lake/**/*.py
+# Block all heavy data everywhere
+*.mp4
+*.csv
+*.tiff
+*.tif
+*.png
+*.jpg
+*.jpeg
+*.pth
+*.onnx
+
+configs/settings_local.py
+.env
+
+# Local/System Files
+wandb/
+.DS_Store
+!DATA_LAKE_MANIFEST_V41.csv

@@ -1,0 +1,14 @@
+name: ml_expressions
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - tensorflow
+  - pip:
+      - gradio
+      - transformers

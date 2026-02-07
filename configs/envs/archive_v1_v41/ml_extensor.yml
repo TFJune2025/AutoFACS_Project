@@ -1,0 +1,39 @@
+# speech: SpeechRecognition, pydub, or librosa 
+# my even integrate TensorFlow Audio 
+name: ml_extensor
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core Python and Jupyter components
+  - python=3.9
+  - ipykernel
+  - jupyter
+  - notebook
+  - jupyterlab
+
+  # Core libraries
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+
+  # TensorFlow ecosystem
+  - tensorflow=2.11.0
+  - tensorflow-estimator
+  - keras
+
+  # Utilities
+  - tqdm
+  - pyyaml
+  - scikit-learn
+  - scipy
+
+  # Image and video processing
+  - opencv
+  - pillow
+  - imageio
+
+  # Pip packages
+  - pip:
+      - gradio==4.44.1

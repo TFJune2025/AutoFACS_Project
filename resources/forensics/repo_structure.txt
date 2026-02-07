@@ -1,0 +1,172 @@
+
+tree -I '__pycache__|.git|.DS_Store|data_lake' > repo_structure.txt
+
+
+.
+├── __init__.py
+├── agents.md
+├── AutoFACS_FSD.md
+├── boot.py
+├── BOOTLOADER.md
+├── configs
+│   ├── __init__.py
+│   ├── config.py
+│   ├── environment_automl.yml
+│   ├── scraper_engine.py
+│   ├── scraper_settings.py
+│   └── settings.py
+├── graveyard
+│   ├── Google Gemini_files
+│   │   ├── 192px.svg
+│   │   ├── ad_status.js
+│   │   ├── base.js
+│   │   ├── bscframe.html
+│   │   ├── cast_sender.js
+│   │   ├── cast_sender(1).js
+│   │   ├── cb=gapi.loaded_0
+│   │   ├── code
+│   │   ├── destination
+│   │   ├── destination(1)
+│   │   ├── embed.js
+│   │   ├── gtm.js
+│   │   ├── highlight.pack.js
+│   │   ├── iframe_api
+│   │   ├── js
+│   │   ├── lazy.min.js
+│   │   ├── lKgQT6ackNw.html
+│   │   ├── m=_b
+│   │   ├── m=hfcr
+│   │   ├── maxresdefault.jpg
+│   │   ├── maxresdefault(1).jpg
+│   │   ├── maxresdefault(2).jpg
+│   │   ├── pKK07kObVnw.html
+│   │   ├── remote.js
+│   │   ├── RotateCookiesPage.html
+│   │   ├── rs=AA2YrTuU828GVrKPauzuvxVHkdTZvT50Zw
+│   │   ├── rs=AA2YrTvUgT7D2Eck4YR6Wo4e3fVTjNN82w
+│   │   ├── saved_resource.html
+│   │   ├── unnamed.jpg
+│   │   ├── unnamed(1).jpg
+│   │   ├── unnamed(2).jpg
+│   │   ├── unnamed(3).jpg
+│   │   ├── unnamed(4).jpg
+│   │   ├── www-embed-player-es6.js
+│   │   ├── www-player.css
+│   │   ├── www-widgetapi.js
+│   │   └── yO32Ta7E6kg.html
+│   ├── Google Gemini.html
+│   └── repo_janitor.py
+├── logs
+│   ├── __init__.py
+│   └── autofacs_20260127.log
+├── main.py
+├── Makefile
+├── missing_files.txt
+├── repo_structure.txt
+├── server_side_organize.sh
+├── src
+│   ├── __init__.py
+│   ├── agent
+│   │   ├── __init__.py
+│   │   ├── agent_architect.py
+│   │   └── master_orchestrator.py
+│   ├── analytics.py
+│   ├── architecture.py
+│   ├── discovery
+│   │   └── lake_scanner.py
+│   ├── inference_core.py
+│   ├── inference.py
+│   ├── list_models.py
+│   ├── logic_gate.py
+│   ├── modeling.py
+│   ├── scheduler.py
+│   ├── synthesis
+│   ├── test_brain.py
+│   ├── video_engine.py
+│   └── vision_utils.py
+├── system_metaprompt.txt
+├── tests
+│   ├── inference_test.py
+│   ├── integrity_check.py
+│   ├── smoke_test.py
+│   └── weight_alignment.py
+├── tools
+│   ├── __init__.py
+│   ├── active_tool.py
+│   ├── autofacs_model_engine.py
+│   ├── bulk_migrator.py
+│   ├── face_recognition_tool.py
+│   ├── face_recognition.py
+│   ├── face_scout.py
+│   ├── golden_schema_executor.py
+│   └── inference_specialist_current.py
+├── v40_v41_locations.txt
+├── verify_phase1.py
+└── wandb
+    ├── debug-internal.log -> run-20260127_180146-bpk6uxkj/logs/debug-internal.log
+    ├── debug.log -> run-20260127_180146-bpk6uxkj/logs/debug.log
+    ├── latest-run -> run-20260127_180146-bpk6uxkj
+    ├── run-20260127_163423-elkg5ncn
+    │   ├── files
+    │   │   └── wandb-summary.json
+    │   ├── logs
+    │   │   ├── debug-core.log -> /Users/natalyagrokh/Library/Caches/wandb/logs/core-debug-20260127_163424.log
+    │   │   ├── debug-internal.log
+    │   │   └── debug.log
+    │   ├── run-elkg5ncn.wandb
+    │   └── tmp
+    │       └── code
+    ├── run-20260127_163752-le9ihuq9
+    │   ├── files
+    │   │   └── wandb-summary.json
+    │   ├── logs
+    │   │   ├── debug-core.log -> /Users/natalyagrokh/Library/Caches/wandb/logs/core-debug-20260127_163752.log
+    │   │   ├── debug-internal.log
+    │   │   └── debug.log
+    │   ├── run-le9ihuq9.wandb
+    │   └── tmp
+    │       └── code
+    ├── run-20260127_164149-rctmvyro
+    │   ├── files
+    │   │   ├── config.yaml
+    │   │   ├── output.log
+    │   │   ├── requirements.txt
+    │   │   ├── wandb-metadata.json
+    │   │   └── wandb-summary.json
+    │   ├── logs
+    │   │   ├── debug-core.log -> /Users/natalyagrokh/Library/Caches/wandb/logs/core-debug-20260127_164149.log
+    │   │   ├── debug-internal.log
+    │   │   └── debug.log
+    │   ├── run-rctmvyro.wandb
+    │   └── tmp
+    │       └── code
+    ├── run-20260127_164228-ow8eenvg
+    │   ├── files
+    │   │   ├── config.yaml
+    │   │   ├── output.log
+    │   │   ├── requirements.txt
+    │   │   ├── wandb-metadata.json
+    │   │   └── wandb-summary.json
+    │   ├── logs
+    │   │   ├── debug-core.log -> /Users/natalyagrokh/Library/Caches/wandb/logs/core-debug-20260127_164228.log
+    │   │   ├── debug-internal.log
+    │   │   └── debug.log
+    │   ├── run-ow8eenvg.wandb
+    │   └── tmp
+    │       └── code
+    └── run-20260127_180146-bpk6uxkj
+        ├── files
+        │   ├── config.yaml
+        │   ├── output.log
+        │   ├── requirements.txt
+        │   ├── wandb-metadata.json
+        │   └── wandb-summary.json
+        ├── logs
+        │   ├── debug-core.log -> /Users/natalyagrokh/Library/Caches/wandb/logs/core-debug-20260127_180146.log
+        │   ├── debug-internal.log
+        │   └── debug.log
+        ├── run-bpk6uxkj.wandb
+        └── tmp
+            └── code
+
+38 directories, 128 files

@@ -1,0 +1,991 @@
+2,944c2,47
+< ./tools
+< ./tools/autofacs_model_engine.py
+< ./tools/__init__.py
+< ./tools/face_recognition_tool.py
+< ./tools/inference_specialist_current.py
+< ./tools/golden_schema_executor.py
+< ./tools/active_tool.py
+< ./tools/face_scout.py
+< ./tools/face_recognition.py
+< ./tools/bulk_migrator.py
+< ./BOOTLOADER.md
+< ./boot.py
+< ./Makefile
+< ./AutoFACS_FSD.md
+< ./resources
+< ./resources/docs
+< ./resources/docs/gcloud storage commands.rtf
+< ./resources/docs/gcloud critical commands.rtf
+< ./resources/docs/terminal_commands.txt
+< ./resources/docs/jupyter lab (gcloud) commands.rtf
+< ./resources/docs/THE EXPRESSION OF THE EMOTIONS IN MAN AND ANIMALS  By Charles Darwin  .docx
+< ./resources/docs/literature.txt
+< ./resources/docs/jupyter lab (gcloud) commands 2.rtf
+< ./resources/forensics
+< ./resources/forensics/repo_tree.txt
+< ./resources/forensics/simplified_tree.txt
+< ./resources/forensics/final_audit_tree.txt
+< ./resources/forensics/final_clean_tree.txt
+< ./resources/forensics/repo_structure.txt
+< ./resources/forensics/signal_tree.txt
+< ./system_metaprompt.txt
+< ./tests
+< ./tests/smoke_test.py
+< ./tests/weight_alignment.py
+< ./tests/integrity_check.py
+< ./tests/inference_test.py
+< ./__init__.py
+< ./current_tree_check.txt
+< ./graveyard
+< ./graveyard/=2.8
+< ./graveyard/=21.0
+< ./graveyard/Google Gemini.html
+< ./graveyard/Google Gemini_files
+< ./graveyard/Google Gemini_files/unnamed(1).jpg
+< ./graveyard/Google Gemini_files/192px.svg
+< ./graveyard/Google Gemini_files/www-widgetapi.js
+< ./graveyard/Google Gemini_files/remote.js
+< ./graveyard/Google Gemini_files/m=hfcr
+< ./graveyard/Google Gemini_files/lazy.min.js
+< ./graveyard/Google Gemini_files/ad_status.js
+< ./graveyard/Google Gemini_files/lKgQT6ackNw.html
+< ./graveyard/Google Gemini_files/highlight.pack.js
+< ./graveyard/Google Gemini_files/maxresdefault(1).jpg
+< ./graveyard/Google Gemini_files/js
+< ./graveyard/Google Gemini_files/maxresdefault.jpg
+< ./graveyard/Google Gemini_files/destination(1)
+< ./graveyard/Google Gemini_files/code
+< ./graveyard/Google Gemini_files/embed.js
+< ./graveyard/Google Gemini_files/pKK07kObVnw.html
+< ./graveyard/Google Gemini_files/destination
+< ./graveyard/Google Gemini_files/www-embed-player-es6.js
+< ./graveyard/Google Gemini_files/yO32Ta7E6kg.html
+< ./graveyard/Google Gemini_files/m=_b
+< ./graveyard/Google Gemini_files/unnamed(4).jpg
+< ./graveyard/Google Gemini_files/RotateCookiesPage.html
+< ./graveyard/Google Gemini_files/unnamed.jpg
+< ./graveyard/Google Gemini_files/gtm.js
+< ./graveyard/Google Gemini_files/base.js
+< ./graveyard/Google Gemini_files/cb=gapi.loaded_0
+< ./graveyard/Google Gemini_files/rs=AA2YrTuU828GVrKPauzuvxVHkdTZvT50Zw
+< ./graveyard/Google Gemini_files/unnamed(3).jpg
+< ./graveyard/Google Gemini_files/iframe_api
+< ./graveyard/Google Gemini_files/cast_sender.js
+< ./graveyard/Google Gemini_files/bscframe.html
+< ./graveyard/Google Gemini_files/maxresdefault(2).jpg
+< ./graveyard/Google Gemini_files/saved_resource.html
+< ./graveyard/Google Gemini_files/www-player.css
+< ./graveyard/Google Gemini_files/unnamed(2).jpg
+< ./graveyard/Google Gemini_files/rs=AA2YrTvUgT7D2Eck4YR6Wo4e3fVTjNN82w
+< ./graveyard/Google Gemini_files/cast_sender(1).js
+< ./graveyard/repo_janitor.py
+< ./logs
+< ./logs/autofacs_20260127.log
+< ./logs/error_log.txt
+< ./logs/V40_full_inference_log.csv
+< ./logs/archive_v1_v41
+< ./logs/archive_v1_v41/skipped_files 2.log
+< ./logs/archive_v1_v41/process_summary.log
+< ./logs/archive_v1_v41/process_summary 2.log
+< ./logs/archive_v1_v41/log 2.txt
+< ./logs/events.out.tfevents.1740759304.ml-expressions.114273.0
+< ./logs/__init__.py
+< ./logs/events.out.tfevents.1745689342.104-171-202-65.2098.0
+< ./logs/unmatched_files.log
+< ./logs/skipped_files.log
+< ./logs/log.txt
+< ./logs/events.out.tfevents.1740755916.ml-expressions.78405.0
+< ./logs/processed_files_log.json
+< ./DATA_LAKE_MANIFEST_V41_QUOTED.csv
+< ./configs
+< ./configs/scraping
+< ./configs/scraping/google custom search engine info.rtf
+< ./configs/scraping/google custom search engine info 2.rtf
+< ./configs/config.py
+< ./configs/__init__.py
+< ./configs/scraper_engine.py
+< ./configs/scraper_settings.py
+< ./configs/settings.py
+< ./configs/envs
+< ./configs/envs/archive_v1_v41
+< ./configs/envs/archive_v1_v41/requirements.txt
+< ./configs/envs/archive_v1_v41/environment.yml
+< ./configs/envs/archive_v1_v41/2024_12_24_ml_expressions(nobuilds).yml
+< ./configs/envs/archive_v1_v41/ml_extorch.yml
+< ./configs/envs/archive_v1_v41/ml_expressions_updated.yml
+< ./configs/envs/archive_v1_v41/pip_packages 2.txt
+< ./configs/envs/archive_v1_v41/environment 2.yml
+< ./configs/envs/archive_v1_v41/ml_expressions.yml
+< ./configs/envs/archive_v1_v41/stable_environment_requirements.txt
+< ./configs/envs/archive_v1_v41/img_curation_v3.yml
+< ./configs/envs/archive_v1_v41/ml_extensor.yml
+< ./configs/envs/archive_v1_v41/ml_expressions_locked.txt
+< ./configs/envs/archive_v1_v41/2024_12_24_ml_expressions.yml
+< ./configs/envs/archive_v1_v41/ml_extensor_final.yml
+< ./configs/envs/archive_v1_v41/ml_expressions(nobuilds) 2.yml
+< ./configs/envs/archive_v1_v41/ml_extensor_nobuild.yml
+< ./configs/envs/archive_v1_v41/conda_packages.txt
+< ./configs/envs/archive_v1_v41/ml_expressions_env.yml
+< ./configs/envs/archive_v1_v41/ml_expressions_v5.yml
+< ./configs/envs/archive_v1_v41/ml_expressions(nobuilds).yml
+< ./configs/envs/archive_v1_v41/ml_extorch_final.yml
+< ./configs/envs/archive_v1_v41/pip_packages.txt
+< ./configs/envs/archive_v1_v41/ml_expr_face_env.yml
+< ./configs/environment_automl.yml
+< ./agents.md
+< ./main.py
+< ./verify_phase1.py
+< ./notebooks
+< ./notebooks/scraping
+< ./notebooks/scraping/img_wikimedia_api_2025_01_17.ipynb
+< ./notebooks/scraping/pexels_img_api_2025_09_25.ipynb
+< ./notebooks/scraping/img_google_api_2024_12_30.ipynb
+< ./notebooks/scraping/archive_v1_v41
+< ./notebooks/scraping/archive_v1_v41/img_pexels_api_2024_12_30 2.ipynb
+< ./notebooks/scraping/archive_v1_v41/reddit_img_api_2025_04_17 2.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_pexels_api_2024_12_30.ipynb
+< ./notebooks/scraping/archive_v1_v41/pexels_img_api_2024_12_30.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_pexels_api_2024_12_30 3.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_wikimedia_api_2025_01_14.ipynb
+< ./notebooks/scraping/archive_v1_v41/beautiful_soup_2024_12_30 2.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_flickr_api_2025_01_12 2.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_flickr_api_2025_01_12.ipynb
+< ./notebooks/scraping/archive_v1_v41/pexels_randimg_2025_05-31 2.ipynb
+< ./notebooks/scraping/archive_v1_v41/flickr_img_api_2025_01_12.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_wikimedia_api_2025_01_14 2.ipynb
+< ./notebooks/scraping/archive_v1_v41/flickr_img_api_2025_01_12_.ipynb
+< ./notebooks/scraping/archive_v1_v41/img_google_api_2024_12_30 2.ipynb
+< ./notebooks/scraping/beautiful_soup_2024_12_30.ipynb
+< ./notebooks/scraping/flickr_img_api_2025_09_25.ipynb
+< ./notebooks/scraping/pexels_randimg_2025_05-31.ipynb
+< ./notebooks/scraping/reddit_img_api_2025_04_17.ipynb
+< ./notebooks/curation
+< ./notebooks/curation/V18_img_sort_2025_06_26.ipynb
+< ./notebooks/curation/img_compare_ML_2025_02_02.ipynb
+< ./notebooks/curation/remove_dupes_2025_09_30.ipynb
+< ./notebooks/curation/neutral_expr_gen_2025_09_29.ipynb
+< ./notebooks/curation/lgimg_curation_2025_01_15.ipynb
+< ./notebooks/curation/curation_helper_2025_07_17.ipynb
+< ./notebooks/curation/train_test_split_folders_2025_02_06.ipynb
+< ./notebooks/curation/datasets_curation_2025_03_24.ipynb
+< ./notebooks/curation/V16_unsup_img_sort_2025_06_05.ipynb
+< ./notebooks/curation/celeba_sorting_2025_05_30.ipynb
+< ./notebooks/curation/folder_moving_2025_01_16.ipynb
+< ./notebooks/curation/7z_files_extrac_2025_01_11.ipynb
+< ./notebooks/curation/img_random_selection_2025_01_09.ipynb
+< ./notebooks/curation/neutral_expr_2025_10_03.ipynb
+< ./notebooks/curation/img_curation_gem_2025_10_18.ipynb
+< ./notebooks/curation/dataset_curation_2025_10_14.ipynb
+< ./notebooks/curation/gatekeeper_dataset_2025_07_25.ipynb
+< ./notebooks/curation/img_curation_gpt_2025_10_18.ipynb
+< ./notebooks/curation/review_img_shortlist_2025_10_10.ipynb
+< ./notebooks/curation/data_augment_2025_01_26.ipynb
+< ./notebooks/curation/img_curation_face_2025_01_28.ipynb
+< ./notebooks/curation/archive_v1_v41
+< ./notebooks/curation/archive_v1_v41/lgimg_curation_2025_01_15 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort2_2025_02_01.ipynb
+< ./notebooks/curation/archive_v1_v41/dataset_cleanup_2025_04_16 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_filter_2025_01_09 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort_2025_02_01 3.ipynb
+< ./notebooks/curation/archive_v1_v41/img_sorting_back_2025_01_14 2.ipynb
+< ./notebooks/curation/archive_v1_v41/clean_speech_action_2025_10_23.ipynb
+< ./notebooks/curation/archive_v1_v41/img_curation_face_2024_12_28.ipynb
+< ./notebooks/curation/archive_v1_v41/img_filter_2025_01_09 4.ipynb
+< ./notebooks/curation/archive_v1_v41/img_sorting_2025_01_13 3.ipynb
+< ./notebooks/curation/archive_v1_v41/img_sorting_2025_01_13.ipynb
+< ./notebooks/curation/archive_v1_v41/imgs_curation_2024_12_28 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_curation_face_2025_01_28 2.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25-4.py
+< ./notebooks/curation/archive_v1_v41/img_filter_2025_01_09 3.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort_2025_02_01 2.ipynb
+< ./notebooks/curation/archive_v1_v41/delete_files_2025_01_12 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort_fail_2025_02_01.ipynb
+< ./notebooks/curation/archive_v1_v41/img_curation_face_2025_01_28 3.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_2025_10_02.ipynb
+< ./notebooks/curation/archive_v1_v41/folder_split_2025_01_14 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_sorting_2025_01_13 2.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25-5.py
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25 2.py
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25-2.py
+< ./notebooks/curation/archive_v1_v41/7z_files_extrac_2025_01_11 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort_fail_2025_02_01 2.ipynb
+< ./notebooks/curation/archive_v1_v41/fake_img_removal_2025_04_17 2.ipynb
+< ./notebooks/curation/archive_v1_v41/dataset_curation_2025_10_14 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_curation_face_2024_12_28 2.ipynb
+< ./notebooks/curation/archive_v1_v41/delete_trash_2025_01_11 2.ipynb
+< ./notebooks/curation/archive_v1_v41/7z_files_moving_2025_01_11 2.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25-6.py
+< ./notebooks/curation/archive_v1_v41/splitting_folders_2025_01_13 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort2_2025_02_01 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_moving_2025_01_11 2.ipynb
+< ./notebooks/curation/archive_v1_v41/remove_dupes_2025_01_14.ipynb
+< ./notebooks/curation/archive_v1_v41/img_unsup_sort_2025_02_01.ipynb
+< ./notebooks/curation/archive_v1_v41/imgs_curation_face_2024_12_28.ipynb
+< ./notebooks/curation/archive_v1_v41/img_autosorting_2025_01_14 3.ipynb
+< ./notebooks/curation/archive_v1_v41/move_files_2025_02_01 2.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25-3.py
+< ./notebooks/curation/archive_v1_v41/imgs_curation_face_2024_12_28 2.ipynb
+< ./notebooks/curation/archive_v1_v41/disgust_sort_2025_04_14 3.ipynb
+< ./notebooks/curation/archive_v1_v41/imgs_curation_2024_12_28.ipynb
+< ./notebooks/curation/archive_v1_v41/img_moving_2025_01_11 3.ipynb
+< ./notebooks/curation/archive_v1_v41/img_zip_extract_2025_01_09 2.ipynb
+< ./notebooks/curation/archive_v1_v41/train_test_split_folders_2025_02_06 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_moving_2025_01_11.ipynb
+< ./notebooks/curation/archive_v1_v41/img_compare_ML_2025_02_02 2.ipynb
+< ./notebooks/curation/archive_v1_v41/disgust_sort_2025_04_14 2.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25.ipynb
+< ./notebooks/curation/archive_v1_v41/celeba_sorting_2025_05_30 2.ipynb
+< ./notebooks/curation/archive_v1_v41/datasets_curation_2025_03_24 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_autosorting_2025_01_14 2.ipynb
+< ./notebooks/curation/archive_v1_v41/img_moving_2025_01_13 2.ipynb
+< ./notebooks/curation/archive_v1_v41/neutral_expr_gen_2025_09_25.py
+< ./notebooks/curation/delete_all_files_2025_01_26.ipynb
+< ./notebooks/curation/fake_img_removal_2025_04_17.ipynb
+< ./notebooks/curation/rename_img_files_2025_09_24.ipynb
+< ./notebooks/curation/dataset_cleanup_2025_04_16.ipynb
+< ./notebooks/curation/mine_speech_action_errors_2025_10_20.ipynb
+< ./notebooks/curation/folder_contents_2026_01_17.ipynb
+< ./notebooks/curation/img_zip_extract_2025_01_09.ipynb
+< ./notebooks/curation/curation_age_2025_09_15.ipynb
+< ./notebooks/curation/folder_split_2025_01_14.ipynb
+< ./notebooks/curation/sort_imgs_back_2025_01_27.ipynb
+< ./notebooks/curation/delete_files_2025_01_12.ipynb
+< ./notebooks/curation/img_sorting_back_2025_01_14.ipynb
+< ./notebooks/curation/move_folder_2025_01_16.ipynb
+< ./notebooks/curation/auto_file_naming_2025_09_15.ipynb
+< ./notebooks/curation/pexels_gem_rescue_2025_10_18.ipynb
+< ./notebooks/curation/pexels_gpt_rescue_2025_10_18.ipynb
+< ./notebooks/curation/splitting_folders_2025_01_13.ipynb
+< ./notebooks/curation/manual_curation_notes.txt
+< ./notebooks/curation/img_cur_adv_2025_01_20.ipynb
+< ./notebooks/curation/7z_files_moving_2025_01_11.ipynb
+< ./notebooks/curation/delete_trash_2025_01_11.ipynb
+< ./notebooks/curation/img_org_emotions_2025_01_26.ipynb
+< ./notebooks/curation/adv_CNN_2025_01_28.ipynb
+< ./notebooks/curation/copy_files_2025_01_26.ipynb
+< ./notebooks/curation/mine_hard_negs_2025_10_20.ipynb
+< ./notebooks/curation/img_moving_2025_01_13.ipynb
+< ./notebooks/curation/img_sorting_2025_01_20.ipynb
+< ./notebooks/curation/to_grayscale_2025_01_21.ipynb
+< ./notebooks/curation/disgust_sort_2025_04_14.ipynb
+< ./notebooks/curation/copy_folder_2025_01_20.ipynb
+< ./notebooks/curation/V41_curation_triage_2025_11_02.ipynb
+< ./notebooks/curation/img_curation_2025_01_17.ipynb
+< ./notebooks/curation/img_autosorting_2025_01_14.ipynb
+< ./notebooks/curation/move_files_2025_02_01.ipynb
+< ./notebooks/curation/img_filter_2025_01_09.ipynb
+< ./notebooks/curation/data_creation_tool_2025_07_28.ipynb
+< ./notebooks/analysis
+< ./notebooks/analysis/V29_emotional_detector.ipynb
+< ./notebooks/analysis/archive_v1_v41
+< ./notebooks/analysis/archive_v1_v41/compare_folders 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/dir_size_2025_01_11.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_pixels_2025_01_09 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_count_compare_2025_01_16.ipynb
+< ./notebooks/analysis/archive_v1_v41/dir_size_2025_01_11 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/imgs_stats_2024_12_28 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_count_2025_01_14.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_count_compare_2025_01_16 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_count_2025_01_09.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_classif_2025_01_19.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_size_det_2025_01_21.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_count_2025_01_14 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/imgs_stats_2024_12_28.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_pixelct_2025_02_04 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_count_2025_01_09 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/inspect_celeba_preds_2025_05_31 2.ipynb
+< ./notebooks/analysis/archive_v1_v41/img_pixels_2025_01_09.ipynb
+< ./notebooks/analysis/img_pixelct_2025_02_04.ipynb
+< ./notebooks/analysis/inspect_celeba_preds_2025_05_31.ipynb
+< ./notebooks/analysis/label_comparison_review_2025_10_10.ipynb
+< ./notebooks/analysis/img_count_compare2025_01_19.ipynb
+< ./notebooks/analysis/compare_folders.ipynb
+< ./notebooks/analysis/img_class_distro_2025_01_26.ipynb
+< ./notebooks/training
+< ./notebooks/training/unsupervised
+< ./notebooks/training/unsupervised/V17_unsup_2025-06-05.ipynb
+< ./notebooks/training/unsupervised/V16_unsup_2025-06-04.ipynb
+< ./notebooks/training/unsupervised/V15_unsup_2025-06-01.ipynb
+< ./notebooks/training/gatekeeper
+< ./notebooks/training/gatekeeper/V1_gatekeeper_2025_07_17.ipynb
+< ./notebooks/training/gatekeeper/V2_gatekeeper_2025_07_25.ipynb
+< ./notebooks/training/supervised
+< ./notebooks/training/supervised/reduced_dataset_run_2024_12_19.ipynb
+< ./notebooks/training/supervised/effecmod_ferset_2025_02_14.ipynb
+< ./notebooks/training/supervised/V42_ferckjalfaga_2025_10_26.ipynb
+< ./notebooks/training/supervised/V24_ferckjalfaga_2025_07_03.ipynb
+< ./notebooks/training/supervised/clean_speech_action_2025_10_23.ipynb
+< ./notebooks/training/supervised/V17_ferckjalf_2025_06_20.ipynb
+< ./notebooks/training/supervised/V14_ferckjalf_2025_06_10.ipynb
+< ./notebooks/training/supervised/V28_ferckjalfaga_2025_07_09.ipynb
+< ./notebooks/training/supervised/2024.12.19 basic CNN (fer2013).ipynb
+< ./notebooks/training/supervised/adv_CNN_combo_2025_01_26.ipynb
+< ./notebooks/training/supervised/V14_ferckjalf_2025_06_14.ipynb
+< ./notebooks/training/supervised/v13_fewshot_finetune_celeba.py
+< ./notebooks/training/supervised/V20_ferckjalfaga_2025_06_29.ipynb
+< ./notebooks/training/supervised/V36_ferckjalfaga_2025_10_16.ipynb
+< ./notebooks/training/supervised/efficientnetb0_affectnet_v2_2024_12_27.ipynb.ipynb
+< ./notebooks/training/supervised/V3_vit_ferckja_2025_03_21.ipynb
+< ./notebooks/training/supervised/V27_ferckjalfaga_2025_07_09.ipynb
+< ./notebooks/training/supervised/2024.12.27 efficientnetb0 (affectnet).ipynb
+< ./notebooks/training/supervised/V9_ferckjalf_2025_05_13.ipynb
+< ./notebooks/training/supervised/V13_ferckjalf_2025_05_27.ipynb
+< ./notebooks/training/supervised/V10_ferckjalf_2025_05_15.ipynb
+< ./notebooks/training/supervised/7_classes_Facial_expression_recognition.ipynb
+< ./notebooks/training/supervised/archive_v1_v41
+< ./notebooks/training/supervised/basic_CNN_fer2013_2024_12_19.ipynb
+< ./notebooks/training/supervised/V35_rescue_code_2025_10_15.ipynb
+< ./notebooks/training/supervised/efficientnetb0_affectnet_2024_12_27.ipynb
+< ./notebooks/training/supervised/V1_vit_ferckja_2025_02_28.ipynb
+< ./notebooks/training/supervised/V12_ferckjalf_2025_05_19.ipynb
+< ./notebooks/training/supervised/V6_vit_ferckja_2025_03_23.ipynb
+< ./notebooks/training/supervised/V22_ferckjalfaga_2025_07_01.ipynb
+< ./notebooks/training/supervised/V21_ferckjalfaga_2025_06_30.ipynb
+< ./notebooks/training/supervised/V25_ferckjalfaga_2025_07_05.ipynb
+< ./notebooks/training/supervised/keras_smalldset_2025_01_26.ipynb
+< ./notebooks/training/supervised/V29_ferckjalfaga_2025_07_10.ipynb
+< ./notebooks/training/supervised/V23_ferckjalfaga_2025_07_02.ipynb
+< ./notebooks/training/supervised/V5_vit_ferckja_2025_03_25.ipynb
+< ./notebooks/training/supervised/V11_ferckjalf_2025_05_16.ipynb
+< ./notebooks/training/supervised/V30_ferckjalfaga_2025_10_05.ipynb
+< ./notebooks/training/supervised/V40_ferckjalfaga_2025_10_22.ipynb
+< ./notebooks/training/supervised/V0_vit_ferckja_2025_02_28.ipynb
+< ./notebooks/training/supervised/V26_ferckjalfaga_2025_07_07.ipynb
+< ./notebooks/training/supervised/2024.12.26 basic CNN (affectnet).ipynb
+< ./notebooks/training/supervised/augm_pretrained_2025_02_04.ipynb
+< ./notebooks/training/supervised/V32_ferckjalfaga_2025_10_08.ipynb
+< ./notebooks/training/supervised/V2_vit_ferckja_2025_03_20.ipynb
+< ./notebooks/training/supervised/model_performance_2025_03_24.ipynb
+< ./notebooks/training/supervised/V33_ferckjalfaga_2025_10_09.ipynb
+< ./notebooks/training/supervised/V36_ferckjalfaga_2025_10_19.ipynb
+< ./notebooks/training/supervised/V30_ferckjalfagasa_2025_08_08.ipynb
+< ./notebooks/training/supervised/basic_CNN_affectnet_2024_12_26.ipynb
+< ./notebooks/training/supervised/V16_ferckjalf_2025_06_17.ipynb
+< ./notebooks/training/supervised/basics_jaffe_2025_02_06.ipynb
+< ./notebooks/training/supervised/v13_fewshot_finetune_celeba_LEGACY.py
+< ./notebooks/training/supervised/V39_ferckjalfaga_2025_10_22.ipynb
+< ./notebooks/training/supervised/V4_vit_ferckja_2025_03_21.ipynb
+< ./notebooks/training/supervised/V38_ferckjalfaga_2025_10_21.ipynb
+< ./notebooks/training/supervised/V31_ferckjalfaga_2025_10_07.ipynb
+< ./notebooks/training/supervised/V19_ferckjalfaga_2025_06_28.ipynb
+< ./notebooks/training/supervised/basic_cnn_fer2013_2025_02_05.ipynb
+< ./notebooks/training/supervised/V7_vit_ferckjalf_2025_04_19.ipynb
+< ./notebooks/training/supervised/V14_ferckjalf_2025_05_31.ipynb
+< ./notebooks/training/supervised/basic_efficientnet_2025_02_10.ipynb
+< ./notebooks/training/supervised/V35_ferckjalfaga_2025_10_14.ipynb
+< ./notebooks/training/supervised/4_Lowest_Classes_(Disgust,_Surprise,_Angry,_Fear)_Facial_expression_recognition_12_11.ipynb
+< ./notebooks/training/supervised/basic_CNN_fer2013_2025_02_07.ipynb
+< ./notebooks/training/supervised/V34_ferckjalfaga_2025_10_11.ipynb
+< ./notebooks/training/supervised/V30_Training_Script_2025_09_18.ipynb
+< ./notebooks/training/supervised/V8_ferckjalf_2025_04_26.ipynb
+< ./notebooks/training/supervised/V16_ferckjalf_2025_06_14.ipynb
+< ./notebooks/training/supervised/efficientnetb0_2025.02.10.ipynb
+< ./notebooks/training/supervised/V41_ferckjalfaga_2025_01_25.ipynb
+< ./notebooks/training/supervised/V6_vit_ferckja_2025_04_12.ipynb
+< ./notebooks/training/supervised/4_Highest_Classes_(Happy,_Neutral,_Sad,_Fear)_Facial_expression_recognition_12_11.ipynb
+< ./notebooks/training/supervised/THE_6_classes_Facial_expression_recognition_12_11.ipynb
+< ./notebooks/training/supervised/V18_ferckjalf_2025_06_23.ipynb
+< ./notebooks/training/supervised/V37_ferckjalfaga_2025_10_20.ipynb
+< ./notebooks/setup
+< ./notebooks/setup/archive_v1_v41
+< ./notebooks/setup/archive_v1_v41/Untitled1.ipynb
+< ./notebooks/setup/archive_v1_v41/2024.12.23 test.ipynb
+< ./notebooks/setup/archive_v1_v41/Untitled.ipynb
+< ./notebooks/setup/archive_v1_v41/Untitled2.ipynb
+< ./notebooks/setup/archive_v1_v41/Untitled 2.ipynb
+< ./notebooks/flywheel
+< ./notebooks/flywheel/V7_20250717_093451_basicvidtest.ipynb
+< ./notebooks/flywheel/V4_20250715_133251_producer_wfilter.ipynb
+< ./notebooks/flywheel/V8_20250722_130942_producer_gatekeep.ipynb
+< ./notebooks/flywheel/V2_20250711_114129_basicvidtest.ipynb
+< ./notebooks/flywheel/V8_20250722_130942_analyzer.ipynb
+< ./notebooks/flywheel/V7_20250717_093451_producer.ipynb
+< ./notebooks/flywheel/V6_20250716_112248_vid_review.ipynb
+< ./notebooks/flywheel/V6_20250716_112248_analyzer.ipynb
+< ./notebooks/flywheel/V6_20250716_112248_producer_wfilter.ipynb
+< ./notebooks/flywheel/V5_20250715_141530_producer_wfilter.ipynb
+< ./notebooks/flywheel/V7_20250717_122112_producer_wfilter.ipynb
+< ./notebooks/flywheel/V9_20250725_154347_analyzer.ipynb
+< ./notebooks/flywheel/V10_20250729_114729_producer_gatekeep.ipynb
+< ./notebooks/flywheel/V7_20250717_122112_analyzer.ipynb
+< ./notebooks/flywheel/V9_20250725_154347_producer_gatekeep.ipynb
+< ./notebooks/flywheel/V2_20250711_114129_analyzer.ipynb
+< ./notebooks/flywheel/V1_20250711_090229_basicvidtest.ipynb
+< ./notebooks/flywheel/V3_20250714_093845_data_diagnostic.ipynb
+< ./notebooks/flywheel/V3_20250714_093845_analyzer.ipynb
+< ./notebooks/flywheel/V5_20250715_141530_analyzer.ipynb
+< ./notebooks/flywheel/V10_20250729_114729_analyzer.ipynb
+< ./notebooks/flywheel/V3_20250714_093845_producer_wfilter.ipynb
+< ./notebooks/flywheel/V4_20250715_133251_analyzer.ipynb
+< ./notebooks/inference
+< ./notebooks/inference/pexels_sorting_2025_10_15.ipynb
+< ./notebooks/inference/img_random_selection_2025_01_09.ipynb
+< ./notebooks/inference/Inference_log_automation_2026_01_02.ipynb
+< ./notebooks/inference/generate_synthetic_speech_2025_08_08.ipynb
+< ./data_lake
+< ./data_lake/AutoAI_Projects
+< ./data_lake/AutoAI_Projects/AutoFACS_Project
+< ./data_lake/AutoAI_Projects/AutoFACS_Project/AutoFACS_FREEZE_2024_12 - 2026_01 copy
+< ./data_lake/AutoAI_Projects/AutoFACS_Project/AutoFACS_Freeze_Final.tar
+< ./data_lake/AutoAI_Projects/FACS_Automation
+< ./data_lake/AutoAI_Projects/FACS_Automation/2024-12-11 SmartAI Hiring Project Plan.docx
+< ./data_lake/AutoAI_Projects/FACS_Automation/Business Planning
+< ./data_lake/AutoAI_Projects/FACS_Automation/Literature／Research
+< ./data_lake/AutoAI_Projects/FACS_Automation/Technical Documentation
+< ./data_lake/AutoAI_Projects/Learning Platform
+< ./data_lake/AutoAI_Projects/Learning Platform/2013.11 Advertising Model Types.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-10 Learning Platform Business Plan (B2C).docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-10 Learning Platform lean business plan.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-10-19 Competitor Analysis.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-10-19 Competitor Analysis.xlsx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-10-19 STEM clusters business plan.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-11 Learning Platform Business Plan (B2B).docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023-11 original business plan draft.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023.11.15 AI review of business plan.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023.11.15 RACI analysis.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023.11.15 SMART Analysis.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2023.11.21 SWOT Analysis.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/2024.08 AI learning book list.xlsx
+< ./data_lake/AutoAI_Projects/Learning Platform/2025.07.17 Ekman's AUs.xlsx
+< ./data_lake/AutoAI_Projects/Learning Platform/AI Certs Programs.xlsx
+< ./data_lake/AutoAI_Projects/Learning Platform/Business Canvas Model-blank template.docx
+< ./data_lake/AutoAI_Projects/Learning Platform/Business Canvas Model_Sample complete.pdf
+< ./data_lake/AutoAI_Projects/Learning Platform/Development files
+< ./data_lake/AutoAI_Projects/Learning Platform/One-page_business_plan_template_Blank.pdf
+< ./data_lake/AutoAI_Projects/Learning Platform/Professional Services Recs_Louisville SBDC.xlsx
+< ./data_lake/AutoAI_Projects/Learning Platform/SBDC Guide to Entrepreneurship.pdf
+< ./data_lake/AutoAI_Projects/Learning Platform/To Do List.xlsx
+< ./data_lake/AutoAI_Projects/Learning Platform/To Do Running List.docx
+< ./data_lake/Colab Notebooks
+< ./data_lake/Colab Notebooks/Untitled0.ipynb
+< ./data_lake/Research_Archive
+< ./data_lake/Research_Archive/1. K013317_PPM - IG - Structure and Resources.pdf
+< ./data_lake/Research_Archive/2. K013321_PPM - IG - Communications.pdf
+< ./data_lake/Research_Archive/2016 KM Conference Presentation Slides (APQC).pdf
+< ./data_lake/Research_Archive/2016 Transformational Change Through KM (APQC).pdf
+< ./data_lake/Research_Archive/2018 APCQ on Agile.pdf
+< ./data_lake/Research_Archive/2019 Overcoming Awareness Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2019 Overcoming Culture Barriers Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2019 Overcoming Distance Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2019 Overcoming Sponsorship Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2019 Overcoming Time Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2020 Breaking Barriers Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2020 KM Adoption and Behavior Change (APQC).pdf
+< ./data_lake/Research_Archive/2020 Overcoming Experience Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2020 Overcoming Hoarding Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2020 Overcoming Measures Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2020 Overcoming Relationships Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2020 Overcoming Trust Barrier Knowledge Sharing (APQC).pdf
+< ./data_lake/Research_Archive/2021 Weekend Activities.docx
+< ./data_lake/Research_Archive/2021-05-24 Mastermind.docx
+< ./data_lake/Research_Archive/2021-present KM
+< ./data_lake/Research_Archive/2021-present KM/2 FAM XX.docx
+< ./data_lake/Research_Archive/2021-present KM/2022-11 KM FAQs.docx
+< ./data_lake/Research_Archive/2021-present KM/2022-11 KM Frequently Asked Questions.docx
+< ./data_lake/Research_Archive/2021-present KM/2023 KM proposal for Dept.docx
+< ./data_lake/Research_Archive/2021-present KM/2023-02 CKM_Resource_Book v2(5).pdf
+< ./data_lake/Research_Archive/2021-present KM/2023-03 KM_Practicum.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023-03-27 DRAFT - Handover Focus Groups Recommendations (2).docx
+< ./data_lake/Research_Archive/2021-present KM/2023-08-30 Intern KM Plan of Action.docx
+< ./data_lake/Research_Archive/2021-present KM/2023-11 Enterprise KM Strategy (DRAFT).docx
+< ./data_lake/Research_Archive/2021-present KM/2023-12 EKMS Draft (V1).docx
+< ./data_lake/Research_Archive/2021-present KM/2023-present KM interns selection.xlsx
+< ./data_lake/Research_Archive/2021-present KM/2023.02.21 LinkedIn profile statement sample.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.02.21 The Pitch.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.03.27 DRAFT - Handover Focus Groups Recommends.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.04.17 APQC KM conf overview.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.04.24 KMI course overview.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.05.31 change management.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.07 After-Action-Review_V3.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.07 Ensuring Knowledge Continuity during Employee Transitions Report.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.07 N_PD_7120_006A__main.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.07 kct-continuity-book-template.docx
+< ./data_lake/Research_Archive/2021-present KM/2023.07 kct-departee-guide.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.07 kct-incoming-member-guide.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.07 kct-supervisors-guide.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.07 kct-task-documentation-example.pdf
+< ./data_lake/Research_Archive/2021-present KM/2023.08 CPowell Fellows selection.xlsx
+< ./data_lake/Research_Archive/2021-present KM/2023.09-2024.05 Plan／Retro Mtgs.xlsx
+< ./data_lake/Research_Archive/2021-present KM/2023.09-2024.05 Team Roster.xlsx
+< ./data_lake/Research_Archive/2021-present KM/2024 FAM revisions.docx
+< ./data_lake/Research_Archive/2021-present KM/2024 KM FAM language.docx
+< ./data_lake/Research_Archive/2021-present KM/2024 NDAA report.docx
+< ./data_lake/Research_Archive/2021-present KM/2024 VSFS group award.docx
+< ./data_lake/Research_Archive/2021-present KM/2024 VSFS individual award.docx
+< ./data_lake/Research_Archive/2021-present KM/2024-02 NDAA Report pre-Draft.docx
+< ./data_lake/Research_Archive/2021-present KM/2024-02-14 Knowledge Transfer (Responses).xlsx
+< ./data_lake/Research_Archive/2021-present KM/2024-02-14 Knowledge Transfer Responses Visuals.docx
+< ./data_lake/Research_Archive/2021-present KM/2024-02-14 Survey Response Analysis (detailed).docx
+< ./data_lake/Research_Archive/2021-present KM/2024-02-14 survey response analysis.docx
+< ./data_lake/Research_Archive/2021-present KM/2024-03-05 NDAA Knowledge Transfer Survey Talking Points Toplines.docx
+< ./data_lake/Research_Archive/2021-present KM/2024-05 2FAM Revisions for KM Inclusion.docx
+< ./data_lake/Research_Archive/2021-present KM/2024-12-10 PRFA Board Handover Guide.docx
+< ./data_lake/Research_Archive/2021-present KM/2024.02 NDAA raw stats.xlsx
+< ./data_lake/Research_Archive/2021-present KM/2024.09.03 KM Kick-Off Meeting Agenda.docx
+< ./data_lake/Research_Archive/2021-present KM/2024.12 KM Officer Handover.docx
+< ./data_lake/Research_Archive/2021-present KM/2024.12 KM summaries.docx
+< ./data_lake/Research_Archive/2021-present KM/APQC Template.xlsx
+< ./data_lake/Research_Archive/2021-present KM/ATD KM Participant Guide.pdf
+< ./data_lake/Research_Archive/2021-present KM/Asean Foundation Intro to KM for UMUC KM Course.pdf
+< ./data_lake/Research_Archive/2021-present KM/Battle Rhythm ATP 6-0_5 (final).pdf
+< ./data_lake/Research_Archive/2021-present KM/Bragg_KM_Quick_Win_Projects_CKM_Course Short.pptx
+< ./data_lake/Research_Archive/2021-present KM/CIO PowerPoint Script for KM Meeting.docx
+< ./data_lake/Research_Archive/2021-present KM/CIO Presentation Draft 5 11.17.2022.pptx
+< ./data_lake/Research_Archive/2021-present KM/CKE Phase 1 Report.pdf
+< ./data_lake/Research_Archive/2021-present KM/CKE Study Report - 31 March 2017 - Appendices - FINAL.pptx
+< ./data_lake/Research_Archive/2021-present KM/CKM Review Deck.pptx
+< ./data_lake/Research_Archive/2021-present KM/CKM_Resource_Book_(10-22_Initial_Run)_v2(7).pdf
+< ./data_lake/Research_Archive/2021-present KM/CKO Roles.pptx
+< ./data_lake/Research_Archive/2021-present KM/CKO_competency_chapter_with_graphics.docx
+< ./data_lake/Research_Archive/2021-present KM/ChatGPT example of KM Business Case.docx
+< ./data_lake/Research_Archive/2021-present KM/Continuity Book Template (2).docx
+< ./data_lake/Research_Archive/2021-present KM/Continuity book contents.docx
+< ./data_lake/Research_Archive/2021-present KM/DOS-IRM-Full-Color.png
+< ./data_lake/Research_Archive/2021-present KM/DRAFT CoP Business Case_April 2017.docx
+< ./data_lake/Research_Archive/2021-present KM/Dalkir KM in Theory and Practice 2nd Edition (1).pdf
+< ./data_lake/Research_Archive/2021-present KM/Establishing a Lessons Learned Program 11-33.pdf
+< ./data_lake/Research_Archive/2021-present KM/GKM_Strategy_FY_09_-13_final.doc
+< ./data_lake/Research_Archive/2021-present KM/Gameboard.docx
+< ./data_lake/Research_Archive/2021-present KM/Guide-to-the-after_action_review.pdf
+< ./data_lake/Research_Archive/2021-present KM/IFAD KM Strategy.pdf
+< ./data_lake/Research_Archive/2021-present KM/IRM_Brand_Guidelines.png
+< ./data_lake/Research_Archive/2021-present KM/ISO-30401-2018.pdf
+< ./data_lake/Research_Archive/2021-present KM/Implementing a Successful KM Programme.docx
+< ./data_lake/Research_Archive/2021-present KM/K009913_How to Build KM into Daily Work_1.pdf
+< ./data_lake/Research_Archive/2021-present KM/K009951_5_Embed KM Support Roles in the Business (1).pdf
+< ./data_lake/Research_Archive/2021-present KM/K009951_5_Embed KM Support Roles in the Business.pdf
+< ./data_lake/Research_Archive/2021-present KM/K010258_Prioritize_KM_Business_Roles.pdf
+< ./data_lake/Research_Archive/2021-present KM/K010259_Focus_KM_Business_Case_Not_Budget.pdf
+< ./data_lake/Research_Archive/2021-present KM/K010310 _KM_Structure_Staffing_Excellence_Winners_2021.pdf
+< ./data_lake/Research_Archive/2021-present KM/K010396_Change Management Toolkit.pdf
+< ./data_lake/Research_Archive/2021-present KM/K010421_KM_Training_for_Every_Career_Stage.pdf
+< ./data_lake/Research_Archive/2021-present KM/K010427_Create Training That Targets Executives.pdf
+< ./data_lake/Research_Archive/2021-present KM/K011059 KM Adoption and Behavior Change Advice from KM Leaders.pdf
+< ./data_lake/Research_Archive/2021-present KM/K011114 The Value of a Focused and Continually Evolving KM Strategy_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K011222 Recognizing and Rewarding KM Participation_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K011240 How Excellent KM Programs Measure Progress &amp; Value.pdf
+< ./data_lake/Research_Archive/2021-present KM/K011349_10 Steps to Get a KM Program Off the Ground (1).pdf
+< ./data_lake/Research_Archive/2021-present KM/K012864_Battling Up Hill Addressing Change Fatigue.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012864_Substantive and Practical Change Tactics.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012865_Gauging the Intangible Measuring Change .pdf
+< ./data_lake/Research_Archive/2021-present KM/K012910_Effective Change Management Practices_1.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012911_Bridging the Change Management Gap.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012941_Getting Better All the Time.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012942_Avoiding Icebergs.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012943_Organizations&#039; Focus on Change Management.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012944_Hear Their Voices.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012965_Effective Change Management Practices Software Technology Industry.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012966_Effective Change Management Practices Healthcare Industry.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012967_Effective Change Management Practices Industrial Products Industry.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012968_Effective Change Management Practices IT Function.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012969_Effective Change Management Practices Manufacturing Industry.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012970_Effective Change Management Practices Organizational Change Management Function.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012971_Effective Change Management Practices Process Management Function.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012972_Effective Change Management Practices Services Industry.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012973_Effective Change Management Practices Cultural Comparison_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012983_Effective Change Management Practices Organizational Size Comparison.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012984_Effective Change Management Practices Change Role Comparison.pdf
+< ./data_lake/Research_Archive/2021-present KM/K012989 Making Change Management Better.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013016_Improving the Way Organizations Manage Change.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013255_Ensuring Knowledge Continuity at NASA.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013261_Three Ways to Rethink the Workplace in Our Ever-Changing World.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013316_PPM - IG - Rewards and Recognition.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013317_PPM - IG - Structure and Resources.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013318_PPM - IG - Engagement.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013319_PPM - IG - Training.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013320_PPM - IG - Role of Leadership.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013321_PPM - IG - Communications.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013399_ Where Digital and Tacit Knowledge Meet_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013406_How Novartis Created Their Knowledge Management Strategy.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013408_Ensuring Knowledge Continuity During Employee Transitions.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013409_How People, Process, Knowledge, and Technology are Changing the Way We Do Business_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013424_When Can a Project Ride On Its Own - My Bike Analogy.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013429_Big Thinkers, Big Idea - Turning Chaos into Opportunity_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013446_Evaluating Your Change Management Outcomes_1.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013450_Leading the Way through Change.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013471_Guide to Change Management Methodologies.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013478_Lessons in Change from EMSS.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013499_Visualizing a Path to Success at Poirier.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013503_How To Engage Employees (the right way) In Change.pdf
+< ./data_lake/Research_Archive/2021-present KM/K013514_Ernslaw One Change Management Case Study_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K03261_Defining_Value_Proposition_Business_Case_KM_0.pdf
+< ./data_lake/Research_Archive/2021-present KM/K03262_20_Questions_to_Ask_KM_Business_case.pdf
+< ./data_lake/Research_Archive/2021-present KM/K03302_Understanding_the_APQC_KM_CAT.pdf
+< ./data_lake/Research_Archive/2021-present KM/K03348_Best Practices in Change Management - The Seven Tenets of Process Management.pdf
+< ./data_lake/Research_Archive/2021-present KM/K04723_KM_APQC_s Knowledge Management Program Framework_A road map for your KM journey.pdf
+< ./data_lake/Research_Archive/2021-present KM/K06069_Responsibilities_Resource_Requirements_Common_KM_Roles.pdf
+< ./data_lake/Research_Archive/2021-present KM/K06334_Knowledge_Mapping_Overview.pdf
+< ./data_lake/Research_Archive/2021-present KM/K06476_A6_KM_Business_Unit_Champions.pdf
+< ./data_lake/Research_Archive/2021-present KM/K07299_Transformational Change Through KM.pdf
+< ./data_lake/Research_Archive/2021-present KM/K08224 Building a Business Case for Knowledge Management.pdf
+< ./data_lake/Research_Archive/2021-present KM/K08256_Creating_Communication__Plans_for_KM.pdf
+< ./data_lake/Research_Archive/2021-present KM/K09223_APQCs knowledge management strategic planning template.pdf
+< ./data_lake/Research_Archive/2021-present KM/K09528_Communicating_About_KM_Whitepaper.pdf
+< ./data_lake/Research_Archive/2021-present KM/K09542_Build_KM_Brand_That_Resonates.pdf
+< ./data_lake/Research_Archive/2021-present KM/K09543_Promote_KM_with_Success_Stories_Data.pdf
+< ./data_lake/Research_Archive/2021-present KM/K09607_How CMI Leverages Super Users for Knowledge Transfer.pdf
+< ./data_lake/Research_Archive/2021-present KM/K09777_Applying_Agile_in_KM.pdf
+< ./data_lake/Research_Archive/2021-present KM/KM Cert stuff
+< ./data_lake/Research_Archive/2021-present KM/KM Curation Process_Infographics_July 2017.pdf
+< ./data_lake/Research_Archive/2021-present KM/KM Iceberg.docx
+< ./data_lake/Research_Archive/2021-present KM/KM architecture and functions slides.pptx
+< ./data_lake/Research_Archive/2021-present KM/KM contacts.txt
+< ./data_lake/Research_Archive/2021-present KM/KM@State kickoff meeting (2023-09-06 17_00 GMT-4) - Transcript.docx
+< ./data_lake/Research_Archive/2021-present KM/KM@State kickoff meeting (2023-09-06 17_00 GMT-4).docx
+< ./data_lake/Research_Archive/2021-present KM/KM@State kickoff meeting (2023-09-06 17_00 GMT-4).mp4
+< ./data_lake/Research_Archive/2021-present KM/MATURE_KMI.pdf
+< ./data_lake/Research_Archive/2021-present KM/Moving KM graphic.docx
+< ./data_lake/Research_Archive/2021-present KM/Resistance-Checklist.pdf
+< ./data_lake/Research_Archive/2021-present KM/SECI slides.pptx
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-10 at 3.10.45 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-10 at 3.18.16 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 12.19.29 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 12.24.08 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 12.27.06 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 12.37.29 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 2.30.28 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 2.47.07 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 3.01.20 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 3.01.36 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 3.16.52 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 7.18.50 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-12 at 9.49.32 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-16 at 7.21.46 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-17 at 1.48.23 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-17 at 1.49.39 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-17 at 9.14.13 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-17 at 9.17.53 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-22 at 1.46.48 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-08-22 at 1.46.59 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-07 at 10.15.43 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-07 at 10.16.53 AM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-08 at 1.27.25 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-08 at 12.01.48 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-08 at 12.49.19 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-08 at 12.50.07 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Screen Shot 2022-09-20 at 3.24.34 PM.png
+< ./data_lake/Research_Archive/2021-present KM/Typical Obstacles and Solutions.xlsx
+< ./data_lake/Research_Archive/2021-present KM/USAID_PCM_KMOL Report_20230404_508v.pdf
+< ./data_lake/Research_Archive/2021-present KM/USTC J3 KM Governance_13Jan22.docx
+< ./data_lake/Research_Archive/2021-present KM/VSFS 24-25 Projects.xlsx
+< ./data_lake/Research_Archive/2021-present KM/World Bank Community-Primer-2018-Final-2-21-2018.pdf
+< ./data_lake/Research_Archive/2021-present KM/afman33-396.pdf
+< ./data_lake/Research_Archive/2021-present KM/after_action_review_postcard_pdf_400.2kb.pdf
+< ./data_lake/Research_Archive/2021-present KM/before_action_review_postcard_pdf_410.6kb.pdf
+< ./data_lake/Research_Archive/2021-present KM/eCKM_Workbook_v14_(Revised).pdf
+< ./data_lake/Research_Archive/2021-present KM/km_framework_postcard_pdf_125.3kb.pdf
+< ./data_lake/Research_Archive/2021-present KM/knowledge_harvesting_postcard_pdf_303.7kb.pdf
+< ./data_lake/Research_Archive/2021-present KM/~$24-12 Board Handover Rules.docx
+< ./data_lake/Research_Archive/2021-present KM/~$CKM Review Deck.pptx
+< ./data_lake/Research_Archive/2021.10 Common Words Flashcards.docx
+< ./data_lake/Research_Archive/2022-10 KM Roadmap for Sharing.docx
+< ./data_lake/Research_Archive/2022-25 Understanding KM Change Management (APQC).docx
+< ./data_lake/Research_Archive/2023 Balsa Wood Bridge Competition
+< ./data_lake/Research_Archive/2023 Balsa Wood Bridge Competition/2022 BALSA WOOD BRIDGE COMPETITION (2)[9771].pdf
+< ./data_lake/Research_Archive/2023 Balsa Wood Bridge Competition/Balsa Bridge Registration & Rubric.docx
+< ./data_lake/Research_Archive/2023 Balsa Wood Bridge Competition/UofL E-Expo ASCE Balsa Wood Bridge Presentation.pptx
+< ./data_lake/Research_Archive/2023-09-23 Writing Accomplishments Statements.pdf
+< ./data_lake/Research_Archive/2023.02.28 48 Laws of Power Daily Self-Assessment.xlsx
+< ./data_lake/Research_Archive/2023.12 gingerbread.lbrn2
+< ./data_lake/Research_Archive/2024-2025 Recipes
+< ./data_lake/Research_Archive/2024-2025 Recipes/Cookbook (FINAL) - 1:13:36 PM.pptx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Cookbook (Filled & Spaced) - 3:46:22 PM.pptx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Copy of Grokh Olvera Recipes (Final_Copy).xlsx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Copy of Recipes Final.docx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Family Recipes.pptx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Grokh Olvera Recipes (Final).xlsx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Grokh-Olvera Cookbook.pdf
+< ./data_lake/Research_Archive/2024-2025 Recipes/Grokh-Olvera Recipes.md
+< ./data_lake/Research_Archive/2024-2025 Recipes/Grokh-Olvera Recipes.md.docx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Recipe Book Table of Contents.txt
+< ./data_lake/Research_Archive/2024-2025 Recipes/Recipe Images
+< ./data_lake/Research_Archive/2024-2025 Recipes/Recipes Final.docx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Untitled document.docx
+< ./data_lake/Research_Archive/2024-2025 Recipes/Vegetable and fruit Detox diet.docx
+< ./data_lake/Research_Archive/2024-2025 Recipes/recipes_structured.xlsx
+< ./data_lake/Research_Archive/2024-2025 Recipes/🩺 Natasha's Integrated Health Routine Report.docx
+< ./data_lake/Research_Archive/2025 Libby O'Connell Reference.pdf
+< ./data_lake/Research_Archive/2025 Libby recommendation.docx
+< ./data_lake/Research_Archive/2025.02 My measurements.docx
+< ./data_lake/Research_Archive/2027 Family Plans
+< ./data_lake/Research_Archive/2027 Family Plans/2008- (Present) Budgets.xlsb
+< ./data_lake/Research_Archive/2027 Family Plans/2024.12.26 List of Places.docx
+< ./data_lake/Research_Archive/3. K013318_PPM - IG - Engagement.pdf
+< ./data_lake/Research_Archive/3. K013503_How To Engage Employees (the right way) In Change.pdf
+< ./data_lake/Research_Archive/4. K013319_PPM - IG - Training.pdf
+< ./data_lake/Research_Archive/48 laws to sort.xlsx
+< ./data_lake/Research_Archive/5. K013320_PPM - IG - Role of Leadership.pdf
+< ./data_lake/Research_Archive/6. K013316_PPM - IG - Rewards and Recognition.pdf
+< ./data_lake/Research_Archive/AI Certification Study and Analysis.docx
+< ./data_lake/Research_Archive/An Integrative Health Framework for the Perimenopausal Transition.docx
+< ./data_lake/Research_Archive/Auto Call Recorder
+< ./data_lake/Research_Archive/Auto Call Recorder/All
+< ./data_lake/Research_Archive/Auto Call Recorder/Retirement summary.pdf
+< ./data_lake/Research_Archive/Auto Call Recorder/fw4.pdf
+< ./data_lake/Research_Archive/Breaking_Barriers_Culture_FINAL.mp3
+< ./data_lake/Research_Archive/Breaking_Barriers_Distance_FINAL.mp3
+< ./data_lake/Research_Archive/Breaking_Barriers_Miss_Alighned_Measures_FINAL (1).mp3
+< ./data_lake/Research_Archive/Breaking_Barriers_SPONSORSHIP_FINAL.mp3
+< ./data_lake/Research_Archive/Breaking_Barriers_podcast_1_FINAL.mp3
+< ./data_lake/Research_Archive/Breaking_Barriers_podcast_2_FINAL.mp3
+< ./data_lake/Research_Archive/CKE Phase 1 Report.pdf
+< ./data_lake/Research_Archive/Certs
+< ./data_lake/Research_Archive/Certs/PMLE
+< ./data_lake/Research_Archive/Change Mgt YouTube vids.docx
+< ./data_lake/Research_Archive/Circuit Breaker Box Key.docx
+< ./data_lake/Research_Archive/Circuit Breaker Directory.xlsx
+< ./data_lake/Research_Archive/Complainant's Response to Agency's Supplemental Discovery Requests.docx
+< ./data_lake/Research_Archive/Copy of Cookbook (Section Dividers) - 1:13:36 PM.pptx
+< ./data_lake/Research_Archive/Copy of Cookbook (fixed slides) - 1:13:36 PM.pptx
+< ./data_lake/Research_Archive/Dad's Chicken Congee: A Chinese Chef's Secrets (V….pdf
+< ./data_lake/Research_Archive/Do you want a baby bunny?.docx
+< ./data_lake/Research_Archive/EE Learning
+< ./data_lake/Research_Archive/EE Learning/Gravitron
+< ./data_lake/Research_Archive/Establishing a Lessons Learned Program 11-33.pdf
+< ./data_lake/Research_Archive/Gemini, I made some changes. Check if all looks go....docx
+< ./data_lake/Research_Archive/Girls Learning
+< ./data_lake/Research_Archive/Girls Learning/2022 Nina Birthday
+< ./data_lake/Research_Archive/Girls Learning/2023 Bridges
+< ./data_lake/Research_Archive/Girls Learning/2023-04-01 Nina Grokh Olvera Poem.docx
+< ./data_lake/Research_Archive/Girls Learning/2024 Nina's Summer Study Schedule.docx
+< ./data_lake/Research_Archive/Girls Learning/2024.09 Ukr map out,inline
+< ./data_lake/Research_Archive/Girls Learning/2024.11 Maya JCPS registration.pdf
+< ./data_lake/Research_Archive/Girls Learning/2024.11 Nina robot club.docx
+< ./data_lake/Research_Archive/Girls Learning/2024.12 reindeer craft.PNG
+< ./data_lake/Research_Archive/Girls Learning/2024.12 reindeer craft.docx
+< ./data_lake/Research_Archive/Girls Learning/2024.12 reindeer craft.pdf
+< ./data_lake/Research_Archive/Girls Learning/482988_1.webp
+< ./data_lake/Research_Archive/Girls Learning/Crafts
+< ./data_lake/Research_Archive/Girls Learning/Educational Enhancement Opportunity Request (2).pdf
+< ./data_lake/Research_Archive/Girls Learning/Educational Enhancement Opportunity Request.pdf
+< ./data_lake/Research_Archive/Girls Learning/Elf on the Shelf.docx
+< ./data_lake/Research_Archive/Girls Learning/Nina's flashcards
+< ./data_lake/Research_Archive/Girls Learning/Screen Shot 2024-09-12 at 3.55.41 PM.png
+< ./data_lake/Research_Archive/Girls Learning/Screen Shot 2024-09-12 at 3.56.02 PM.png
+< ./data_lake/Research_Archive/Girls Learning/Screen Shot 2024-09-12 at 3.56.25 PM.png
+< ./data_lake/Research_Archive/Girls Learning/Screen Shot 2024-09-12 at 3.58.12 PM.png
+< ./data_lake/Research_Archive/Girls Learning/Ukr Learning
+< ./data_lake/Research_Archive/Girls Learning/Ukraine Map Puzzle.png
+< ./data_lake/Research_Archive/Girls Learning/division flash cards.pdf
+< ./data_lake/Research_Archive/Girls Learning/mp3 for children
+< ./data_lake/Research_Archive/Girls Learning/multiplication flashcards.pdf
+< ./data_lake/Research_Archive/Grant Application Essays.pdf
+< ./data_lake/Research_Archive/Health Routine Research: Mainstream vs. Traditional.docx
+< ./data_lake/Research_Archive/IMG_4392.HEIC
+< ./data_lake/Research_Archive/IMG_4393.HEIC
+< ./data_lake/Research_Archive/IMG_4394.HEIC
+< ./data_lake/Research_Archive/IMG_4395.HEIC
+< ./data_lake/Research_Archive/IMG_4437.HEIC
+< ./data_lake/Research_Archive/IMG_4438.HEIC
+< ./data_lake/Research_Archive/IMG_4439.HEIC
+< ./data_lake/Research_Archive/IMG_4441.HEIC
+< ./data_lake/Research_Archive/IMG_4442.HEIC
+< ./data_lake/Research_Archive/IMG_4443.HEIC
+< ./data_lake/Research_Archive/IMG_4477.HEIC
+< ./data_lake/Research_Archive/IMG_4478.HEIC
+< ./data_lake/Research_Archive/IMG_4479.HEIC
+< ./data_lake/Research_Archive/IMG_4480.HEIC
+< ./data_lake/Research_Archive/IMG_4481.HEIC
+< ./data_lake/Research_Archive/IMG_4483.HEIC
+< ./data_lake/Research_Archive/IMG_4484.HEIC
+< ./data_lake/Research_Archive/IMG_4489.HEIC
+< ./data_lake/Research_Archive/IMG_4493.HEIC
+< ./data_lake/Research_Archive/IMG_4497.HEIC
+< ./data_lake/Research_Archive/IMG_4498.HEIC
+< ./data_lake/Research_Archive/IMG_4499.HEIC
+< ./data_lake/Research_Archive/IMG_4500.HEIC
+< ./data_lake/Research_Archive/IMG_4502.HEIC
+< ./data_lake/Research_Archive/K010396_Change Management Toolkit.pdf
+< ./data_lake/Research_Archive/K012864_Battling Up Hill Addressing Change Fatigue.pdf
+< ./data_lake/Research_Archive/K012864_Substantive and Practical Change Tactics.pdf
+< ./data_lake/Research_Archive/K012865_Gauging the Intangible Measuring Change .pdf
+< ./data_lake/Research_Archive/K012910_Effective Change Management Practices_1.pdf
+< ./data_lake/Research_Archive/K012911_Bridging the Change Management Gap.pdf
+< ./data_lake/Research_Archive/K012941_Getting Better All the Time.pdf
+< ./data_lake/Research_Archive/K012942_Avoiding Icebergs.pdf
+< ./data_lake/Research_Archive/K012943_Organizations&#039; Focus on Change Management.pdf
+< ./data_lake/Research_Archive/K012944_Hear Their Voices.pdf
+< ./data_lake/Research_Archive/K012965_Effective Change Management Practices Software Technology Industry.pdf
+< ./data_lake/Research_Archive/K012966_Effective Change Management Practices Healthcare Industry.pdf
+< ./data_lake/Research_Archive/K012967_Effective Change Management Practices Industrial Products Industry.pdf
+< ./data_lake/Research_Archive/K012968_Effective Change Management Practices IT Function.pdf
+< ./data_lake/Research_Archive/K012969_Effective Change Management Practices Manufacturing Industry.pdf
+< ./data_lake/Research_Archive/K012970_Effective Change Management Practices Organizational Change Management Function.pdf
+< ./data_lake/Research_Archive/K012971_Effective Change Management Practices Process Management Function.pdf
+< ./data_lake/Research_Archive/K012972_Effective Change Management Practices Services Industry.pdf
+< ./data_lake/Research_Archive/K012973_Effective Change Management Practices Cultural Comparison_0.pdf
+< ./data_lake/Research_Archive/K012983_Effective Change Management Practices Organizational Size Comparison.pdf
+< ./data_lake/Research_Archive/K012984_Effective Change Management Practices Change Role Comparison.pdf
+< ./data_lake/Research_Archive/K012989 Making Change Management Better.pdf
+< ./data_lake/Research_Archive/K013016_Improving the Way Organizations Manage Change.pdf
+< ./data_lake/Research_Archive/K013446_Evaluating Your Change Management Outcomes_1.pdf
+< ./data_lake/Research_Archive/K013450_Leading the Way through Change.pdf
+< ./data_lake/Research_Archive/K013471_Guide to Change Management Methodologies.pdf
+< ./data_lake/Research_Archive/K013478_Lessons in Change from EMSS.pdf
+< ./data_lake/Research_Archive/K013499_Visualizing a Path to Success at Poirier.pdf
+< ./data_lake/Research_Archive/K013505_Connecting the Dots.pdf
+< ./data_lake/Research_Archive/K013514_Ernslaw One Change Management Case Study_0.pdf
+< ./data_lake/Research_Archive/K03348_Best Practices in Change Management - The Seven Tenets of Process Management.pdf
+< ./data_lake/Research_Archive/Monterey.docx
+< ./data_lake/Research_Archive/NASEF-Farmcraft-2024_v1.mcworld
+< ./data_lake/Research_Archive/Ok, Gemini, now that you have done all the backgr....xlsx
+< ./data_lake/Research_Archive/Ok, great, here are the results from the code run....xlsx
+< ./data_lake/Research_Archive/Phineas Tripp.pdf
+< ./data_lake/Research_Archive/Request for Deposition Testimony.docx
+< ./data_lake/Research_Archive/Resistance-Checklist.pdf
+< ./data_lake/Research_Archive/Russian Immersion Program at Middlebury Language Schools.pdf
+< ./data_lake/Research_Archive/Saved from Chrome
+< ./data_lake/Research_Archive/Saved from Chrome/ValidProofDocuments.pdf
+< ./data_lake/Research_Archive/Screen Shot 2022-06-07 at 1.21.28 PM.png
+< ./data_lake/Research_Archive/Type B Diet.docx
+< ./data_lake/Research_Archive/Untitled document.docx
+< ./data_lake/Research_Archive/Untitled spreadsheet.xlsx
+< ./data_lake/Research_Archive/Untitled.docx
+< ./data_lake/Research_Archive/Vegetable and fruit Detox diet.docx
+< ./data_lake/Research_Archive/Wait, that’s contradictory, Luke IS available at....xlsx
+< ./data_lake/Research_Archive/Work docs
+< ./data_lake/Research_Archive/Work docs/2016.09 Grokh Resume.docx
+< ./data_lake/Research_Archive/Work docs/2020 Grokh Resume (pmp-heavy).docx
+< ./data_lake/Research_Archive/Work docs/2020 Grokh Resume (website maint).docx
+< ./data_lake/Research_Archive/Work docs/2020.12 Evac stuff
+< ./data_lake/Research_Archive/Work docs/2022-present DOS travel
+< ./data_lake/Research_Archive/Work docs/2023-02-23 Sorted FG data (5).xlsx
+< ./data_lake/Research_Archive/Work docs/2023-05-30 Eagleburger personal statement.docx
+< ./data_lake/Research_Archive/Work docs/2023-05-30 SpaceX cover letter.docx
+< ./data_lake/Research_Archive/Work docs/2023-05-31 SpaceX Exchange.docx
+< ./data_lake/Research_Archive/Work docs/2023.05 Grokh Resume.pdf
+< ./data_lake/Research_Archive/Work docs/2023.05.23 Eagleburger recommendation 1.docx
+< ./data_lake/Research_Archive/Work docs/2023.05.23 Eagleburger recommendation 2.docx
+< ./data_lake/Research_Archive/Work docs/2023.08 KM interns selection.xlsx
+< ./data_lake/Research_Archive/Work docs/2023.12 Defeat Motherfucker Plan.docx
+< ./data_lake/Research_Archive/Work docs/2024 EEO
+< ./data_lake/Research_Archive/Work docs/2024 EEO counselors.xlsx
+< ./data_lake/Research_Archive/Work docs/2024 Grokh Resume.docx
+< ./data_lake/Research_Archive/Work docs/2024 VSFS award.docx
+< ./data_lake/Research_Archive/Work docs/2024-02-09 Session 20 data.docx
+< ./data_lake/Research_Archive/Work docs/2024-02-14 Knowledge Transfer (FSO Responses).csv
+< ./data_lake/Research_Archive/Work docs/2024-02-14 Knowledge Transfer (FSO Responses).xlsx
+< ./data_lake/Research_Archive/Work docs/2024-present PFRA
+< ./data_lake/Research_Archive/Work docs/2024.01.19 EEO initial complaint letter.pdf
+< ./data_lake/Research_Archive/Work docs/2024.06 AI4KM Project Ideas (Grokh, Natasha).docx
+< ./data_lake/Research_Archive/Work docs/2024.06 CfA AI4KM .docx
+< ./data_lake/Research_Archive/Work docs/2024.08 Grokh Resume.docx
+< ./data_lake/Research_Archive/Work docs/2024.08 Grokh Resume.pdf
+< ./data_lake/Research_Archive/Work docs/2025.01 analytics portfolio mtg.docx
+< ./data_lake/Research_Archive/Work docs/24-STATE-30246.eml.pdf
+< ./data_lake/Research_Archive/Work docs/2a. Jonathan Crawford Letter 1.docx
+< ./data_lake/Research_Archive/Work docs/2a. Jonathan Crawford Letter 1.pdf
+< ./data_lake/Research_Archive/Work docs/2b. Jonathan Crawford Letter 2.docx
+< ./data_lake/Research_Archive/Work docs/2b. Jonathan Crawford Letter 2.pdf
+< ./data_lake/Research_Archive/Work docs/Copy of 2024-02 FSO responses to Mentorship 'other' category sentiment analysis.docx
+< ./data_lake/Research_Archive/Work docs/Copy of 2024-02 FSO responses to Relationships 'other' category sentiment analysis.docx
+< ./data_lake/Research_Archive/Work docs/DOS claims
+< ./data_lake/Research_Archive/Work docs/DS-5085.pdf
+< ./data_lake/Research_Archive/Work docs/DS-7100 (4).pdf
+< ./data_lake/Research_Archive/Work docs/ECS Fillable Intake Packet.pdf
+< ./data_lake/Research_Archive/Work docs/EER
+< ./data_lake/Research_Archive/Work docs/Eagleburger
+< ./data_lake/Research_Archive/Work docs/Econ@State
+< ./data_lake/Research_Archive/Work docs/FSA receipts
+< ./data_lake/Research_Archive/Work docs/GSA list of CONUS offices.xlsx
+< ./data_lake/Research_Archive/Work docs/Grokh Signature.png
+< ./data_lake/Research_Archive/Work docs/LCM421 Chinese Express
+< ./data_lake/Research_Archive/Work docs/MOU A-DT EX Grokh-Detail Assignment to SPD 1.docx
+< ./data_lake/Research_Archive/Work docs/MOU A-DT EX Grokh-Detail Assignment to SPD 1.pdf
+< ./data_lake/Research_Archive/Work docs/Mentorship
+< ./data_lake/Research_Archive/Work docs/Natasha Chinese
+< ./data_lake/Research_Archive/Work docs/OIG
+< ./data_lake/Research_Archive/Work docs/Remote Work Agreement.docx
+< ./data_lake/Research_Archive/Work docs/SPD
+< ./data_lake/Research_Archive/Work docs/Talken
+< ./data_lake/Research_Archive/Work docs/Whistleblowing case.docx
+< ./data_lake/Research_Archive/Work docs/~$23.12 Defeat Motherfucker Plan.docx
+< ./data_lake/Research_Archive/and rework the columns so that it goes in the fir....xlsx
+< ./data_lake/Research_Archive/fry_001_100.txt
+< ./data_lake/Research_Archive/gemini focus on this new task.␊␊now that i've got....xlsx
+< ./data_lake/Research_Archive/gemini reset now. focus on this topic. i'm attach....xlsx
+< ./data_lake/Research_Archive/gemini, i often find myself a little unsure about....xlsx
+< ./data_lake/Research_Archive/gemini, i've rerun the latest API tokens script a....xlsx
+< ./data_lake/Research_Archive/gemini, work this into a google sheet:␊␊␊␊Recipe_....xlsx
+< ./data_lake/Research_Archive/image.png
+< ./data_lake/Research_Archive/instead of focusing on the errors and issues, rat....docx
+< ./data_lake/Research_Archive/just a working draft to discard.docx
+< ./data_lake/Research_Archive/macos, etc
+< ./data_lake/Research_Archive/macos, etc/lightburn.docx
+< ./data_lake/Research_Archive/ok, gemini, so for my manual curation, when i see....xlsx
+< ./data_lake/Research_Archive/resistance chart.pdf
+< ./data_lake/Research_Archive/shakespeare.txt
+< ./data_lake/Research_Archive/Þæs ofereode, þisses swa mæg.png
+< ./wandb
+< ./wandb/debug-internal.log
+< ./wandb/debug.log
+< ./wandb/latest-run
+< ./src
+< ./src/test_brain.py
+< ./src/video_engine.py
+< ./src/inference_core.py
+< ./src/discovery
+< ./src/discovery/lake_scanner.py
+< ./src/__init__.py
+< ./src/agent
+< ./src/agent/__init__.py
+< ./src/agent/agent_architect.py
+< ./src/agent/master_orchestrator.py
+< ./src/synthesis
+< ./src/logic_gate.py
+< ./src/list_models.py
+< ./src/architecture.py
+< ./src/inference.py
+< ./src/vision_utils.py
+< ./src/scheduler.py
+< ./src/analytics.py
+< ./src/modeling.py
+< ./server_side_organize.sh
+---
+> ├── configs
+> │   ├── envs
+> │   └── scraping
+> ├── data_lake
+> │   ├── AutoAI_Projects
+> │   │   ├── AutoFACS_Project
+> │   │   ├── FACS_Automation
+> │   │   └── Learning Platform
+> │   └── Research_Archive
+> │       ├── 2021-present KM
+> │       ├── 2023 Balsa Wood Bridge Competition
+> │       ├── 2024-2025 Recipes
+> │       ├── 2027 Family Plans
+> │       ├── Auto Call Recorder
+> │       ├── Certs
+> │       ├── EE Learning
+> │       ├── Girls Learning
+> │       ├── macos, etc
+> │       ├── Saved from Chrome
+> │       └── Work docs
+> ├── graveyard
+> │   └── Google Gemini_files
+> ├── logs
+> ├── notebooks
+> │   ├── analysis
+> │   ├── curation
+> │   ├── flywheel
+> │   ├── inference
+> │   ├── scraping
+> │   ├── setup
+> │   └── training
+> │       ├── gatekeeper
+> │       ├── supervised
+> │       └── unsupervised
+> ├── resources
+> │   ├── docs
+> │   └── infrastructure
+> │       └── linux_drivers
+> ├── src
+> │   ├── agent
+> │   ├── discovery
+> │   └── synthesis
+> ├── tests
+> └── tools
+> 
+> 45 directories

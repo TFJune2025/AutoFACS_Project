@@ -1,0 +1,10 @@
+name: img_curation_v3
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - google-cloud-aiplatform>=1.55.0
+    - pillow
+    - ipython

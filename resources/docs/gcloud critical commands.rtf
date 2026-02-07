@@ -1,0 +1,147 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww11520\viewh10380\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs38 \cf0 \expnd0\expndtw0\kerning0
+Start Instance:\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs34 \cf0 gcloud compute instances start ml-expressions --zone=us-central1-f
+\f0\b\fs38 \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs42 \cf0 SSH into VM:
+\f1\b0\fs34 \
+ssh gcloud-ml-expressions\
+\
+Either of these works (but replace the @ IP address each time):\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\fs30 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 ssh -i ~/.ssh/id_rsa_mlexpressions -L 9090:127.0.0.1:9090 natalyagrokh@<EXTERNAL_IP>
+\fs26 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs34 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+ssh -i /Users/natalyagrokh/.ssh/id_rsa_mlexpressions -L 9090:127.0.0.1:9090 natalyagrokh@35.223.119.15\
+\
+tar --overwrite -xvf <file.tar.gz>\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs52 \cf0 Start Jupyter Lab:
+\f1\b0\fs34 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Access Jupiter Lab locally (use browser other than chrome): 
+\f1\b0\fs24 \
+
+\fs30 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \kerning1\expnd0\expndtw0 \CocoaLigature0 jupyter lab --ip=0.0.0.0 --port=9090 --no-browser &
+\fs30 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs34 \cf0 OR:
+\fs30 \
+\pard\pardeftab720\partightenfactor0
+\cf0 http://127.0.0.1:9090
+\fs28  in your browser.
+\fs38 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs34 \cf0 OR:\
+Copy/paste given URL\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs52 \cf0 Quit Jupyter Lab:
+\f1\b0\fs34 \
+pkill -9 jupyter\
+ps aux | grep jupyter\
+kill -9 <PID>\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs46 \cf0 Create SSH tunnel:
+\f1\b0\fs34 \
+ssh -L 8888:127.0.0.1:8888 -i ~/.ssh/id_rsa_mlexpressions natalyagrokh@<VM_EXTERNAL_IP>\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs52 \cf0 \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs44 \cf0 Local Terminal Commands:
+\fs34 \
+gcloud compute instances list\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs30 \cf0 If the instance status is not 
+\fs32 RUNNING
+\fs30 , start it:
+\f1\b0\fs34 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 gcloud compute instances start ml-expressions-notebook-wbi --zone=us-central1-b\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 If instance IS RUNNING:
+\f1\b0 \
+gcloud compute ssh ml-expressions-notebook-wbi --zone=us-central1-b\
+**use the computer pas
+\fs52 \
+\
+\
+Google Shell Commands:\
+Go to https://console.cloud.google.com/\
+Open shell on the top right hand side and type one of these commands:\
+\
+gcloud compute instances start ml-expressions-notebook-wbi --zone=us-central1-b\
+\
+gcloud compute instances stop ml-expressions-notebook-wbi --zone=us-central1-b\
+\
+gcloud compute instances suspend ml-expressions-notebook-wbi --zone=us-central1-b\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs34 \cf0 \
+\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\fs46 \cf0 Storage Buckets:
+\fs34 \
+The file 
+\fs36 library.tar.gz
+\fs34  exists in:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+GCP Cloud Shell:
+\f1\b0  
+\fs36 /home/ngrokh/gcs-bucket/library.tar.gz
+\fs34 \
+\ls1\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+GCP Storage Bucket:
+\f1\b0  
+\fs36 ml-expressions-bucket/library.tar.gz
+\fs34 \
+}

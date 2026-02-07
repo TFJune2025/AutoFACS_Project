@@ -1,0 +1,128 @@
+Manual curation:
+
+Based on the folder structures you've provided, you have already done an excellent job of separating ambiguous expressions. Several of your existing labels are a perfect fit for the `hard_case` category we have been discussing.
+
+The following labels from your datasets best fit the `hard_case` definition:
+
+* **Folders with "ambiguous" or "blends" in the name:** These are the most direct fit. [cite_start]An ambiguous expression is, by definition, a hard case for a classifier to handle[cite: 22]. [cite_start]A blend of two emotions (like disgust and anger) is also a classic hard case[cite: 22].
+    * [cite_start]`anger_ambiguous` [cite: 22]
+    * [cite_start]`anger_blends` [cite: 22]
+    * [cite_start]`disgust_anger` [cite: 22]
+
+* **Folders indicating social or cognitive states:** These are expressions that do not map to pure, core emotions and are often confused with them.
+    * [cite_start]`disbelief (akin to questioning)` [cite: 22]
+    * [cite_start]`boredom` [cite: 22]
+    * [cite_start]`smugness` [cite: 23]
+
+* **Folders for simulated or incomplete emotions:** These are crucial for teaching the model the difference between genuine and feigned expressions.
+    * [cite_start]`simulating` [cite: 23]
+    * [cite_start]`masking` [cite: 22]
+    * [cite_start]`smile_fake` [cite: 23]
+
+* **Folders for non-prototypical or low-intensity expressions:** Mild expressions are harder to detect and can be confused with neutral states, while "other" implies non-standard variations.
+    * [cite_start]`fear_other` [cite: 22]
+    * [cite_start]`questioning_other` [cite: 22]
+    * [cite_start]`sadness_other` [cite: 23]
+    * [cite_start]`surprise_mild` [cite: 23]
+
+
+
+Curate `questioning` for eyebrow raisers for hard_cases and leave the lip corner pullers intact
+
+
+Gatekeeper improvement:
+-Random Erasing or GridMask 
+-
+
+Robustly retrain V29 model:
+speech_action-> This includes the synthetic data generated in Section 3.
+
+The goal is to create a new class of training examples that directly contradict the model's flawed logic. Specifically, we need to generate images that contain the upper-face features of a genuine emotion (e.g., 'happiness') but have a lower face that is animated by an unrelated audio track of neutral speech.-> how does the library work in using audio to generate images of moving mouth?
+
+
+MANUAL CURATION:
+
+hard_case-> 
+Speech-Emotion Confounding: This is the most common type of hard case. It is defined by the co-occurrence of AUs strongly associated with speech articulation with AUs strongly associated with an emotional state. For example, the presence of AU 25 (Lips part), AU 26 (Jaw drop), or AU 27 (Mouth stretch)—all fundamental to speech production—simultaneously with upper-face emotion cues like AU 1 + AU 4 (Inner Brow Raiser + Brow Lowerer), a combination strongly indicative of sadness or distress. Labeling such a frame as purely 'sadness' would be incorrect, as would labeling it purely as 'speech'. It is, by definition, a hard_case. -> this to me is highly intertwined with speech_action = an emotional upper face and speaking lower face; give me some differentiators between the two.
+
+A Duchenne smile is characterized by the combination of AU 12 (Lip Corner Puller) and AU 6 (Cheek Raiser), which causes the "crow's feet" around the eyes. A frame showing a strong AU 12 without a corresponding AU 6 is not a clear signal of 'happiness' and should be classified as a    hard_case, as it represents a more ambiguous social signal. -> so, like a half smile, smile without the eyes smiling, fake smile?
+
+Contempt-Speech Overlap: The expression for contempt is unique among the basic emotions for its inherent asymmetry, typically defined as a unilateral (one-sided) AU 12 (Lip Corner Puller) and/or AU 14 (Dimpler). As will be detailed below, this pattern is exceptionally easy to mimic with the asymmetrical mouth movements of speech. Therefore, any frame that exhibits this unilateral AU 12/14 pattern while other AUs indicate active speech (e.g., AU 25/26/27) is a prime candidate for the hard_case label. -> is the attached picture a good example?
+
+Cognitive Load Indicators: Facial expressions also signal cognitive states, not just emotions. A common example is brow furrowing, AU 4 (Brow Lowerer), which is a key component of anger, sadness, and fear. However, it frequently appears in isolation as a sign of concentration or confusion. A frame showing an isolated AU 4 without the other requisite AUs for a negative emotion (e.g., AU 5, AU 7, AU 15) should be considered a hard_case to prevent the model from misinterpreting concentration as anger. -> is the attached picture a good example?
+
+
+Social Smile (Non-Duchenne)	
+AU 12 (bilateral or unilateral) without AU 6    
+
+Zygomaticus major	A polite smile or conversational gesture involving only the mouth, without eye crinkling.	High. A unilateral social smile is visually identical to the contempt expression, differing only in context and intent, which the model cannot perceive. -> ok, so by including polite smiles in the hard_cases, we're removing the model's confusion, is that correct?
+
+
+
+**use Focal Loss function rather than cross-entropy
+The proposed regimen is as follows:
+
+Stage 1: Broad Feature Learning with Cross-Entropy (CE) Loss
+This first stage is about "learning the fundamentals." With a 12-class problem, the model first needs to establish a basic, separable feature space for the most distinct categories. It needs to learn the broad strokes that differentiate a clear, canonical happiness from a clear neutral face, and both of those from a clear speech_action frame. A standard, class-weighted CE loss is well-suited for this initial phase of learning a general-purpose feature representation. Think of this as the model learning the alphabet of facial expressions before it can write sentences.   
+
+Stage 2: Fine-Tuning on Hard Cases with Focal Loss
+This second stage is about "mastering the nuance." Once the model has a stable baseline understanding from Stage 1, we switch to Focal Loss to force it to focus on the most difficult and ambiguous parts of the problem. The    
+
+hard_case label is the primary target here. Focal Loss, with its gamma parameter, will dramatically reduce the loss contribution from the thousands of "easy" examples that the model has already learned to classify correctly (like neutral faces). This amplifies the error signal from the misclassified hard_case examples, compelling the model to expend its full capacity on learning the subtle, non-linear decision boundaries that separate, for instance, cognitive concentration from anger, or a social smile from genuine happiness. This is the mechanism that will drive the improvement you have been looking for.
+
+
+
+
+ [596/596 11:44, Epoch 4/4]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.254600	0.346971	0.852101	0.865443	0.792717	0.952862
+2	0.210400	0.288236	0.890756	0.896332	0.851515	0.946128
+3	0.075100	0.287729	0.905882	0.906977	0.895082	0.919192
+4	0.025700	0.306111	0.904202	0.904523	0.900000	0.909091
+
+
+
+ [668/668 13:50, Epoch 4/4]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.095100	0.076296	0.977444	0.979253	0.967213	0.991597
+2	0.042400	0.086457	0.978947	0.980447	0.977716	0.983193
+3	0.026700	0.072759	0.983459	0.984529	0.988701	0.980392
+4	0.002200	0.069615	0.984962	0.985994	0.985994	0.985994
+
+
+We addressed the "stale images" issue in the producer script.
+
+That specific block of code is part of the analyze_video_with_filters function. Its job is to act as a cleanup mechanism for the static_object_tracker
+
+
+gemini, i finished running V10 data flywheel scripts (producer and analyzer). i did manual curation and attached are the results. deeply analyze them and return y
+
+
+
+Pain / Physical Discomfort: A grimace of pain can involve a raised upper lip (AU 10), a wrinkled nose (AU 9), and tightened eyelids (AU 7). These action units overlap significantly with Disgust and Anger. The model must learn to differentiate a pain reaction from an emotional one.
+
+Fatigue / Yawning: The face of someone who is tired or in the middle of a yawn is very distinct. The wide-open mouth of a yawn (AU 26/27) can be confused with Surprise, while the heavy, drooping eyelids are a key differentiator that the model needs to learn.
+
+Boredom / Disinterest: This is different from a Neutral state. A neutral person is still attentive. A bored person often has a slack jaw, unfocused eyes, and a general lack of muscle tension in the face. This is a critical state to identify correctly in an HR context and not confuse with Sadness or Neutral.
+
+Skepticism / Disbelief: This is a complex social expression that is not a core emotion. It often involves a mix of actions like a one-sided brow raise, a lip press, or a slight head pull-back. It's an intellectual judgment that could easily be misclassified as Contempt or Questioning.
+
+Sadness + Speech: A person trying to speak while crying or on the verge of tears. The upper face shows clear sadness, but the mouth is articulating words instead of forming a classic sad expression.
+
+Surprise + Speech: Someone trying to speak immediately after being surprised. The upper face still shows the wide eyes and raised brows of surprise, but the mouth is trying to form words instead of the typical gasp.
+
+Happiness + Speech (Speaking while Laughing): A person in the middle of laughing while also trying to talk. This creates a very complex and chaotic mouth shape that is neither a pure Duchenne smile nor a simple speech movement.
+
+Curation Guideline: Label as hard_case. The upper face shows the wide eyes and raised brows of fear or alarm, but the mouth is shaped for speech, not a gasp. This teaches the model to separate the fear signal from the speech action.
+
+Hard Case: Polite "Social" Smile
+Curation Guideline: Label as hard_case. This is a smile that involves only the mouth (AU 12) and lacks the crucial eye crinkling (AU 6) of a genuine Duchenne smile. Models must learn not to classify this as high-intensity "happiness."
+
+Hard Case: Questioning or Puzzlement
+Curation Guideline: Label as hard_case. This expression uses a brow furrow (AU 4) associated with negative emotions, but the overall context is cognitive (thinking, questioning) rather than emotional.
+
+Hard Case: Disgust + Speech Articulation
+Curation Guideline: Label as hard_case. The nose wrinkle of disgust (AU 9) is present, but the mouth is open for speech, creating an ambiguous signal that the model needs to learn to parse correctly.
+
+
+

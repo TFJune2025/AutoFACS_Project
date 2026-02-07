@@ -1,0 +1,36 @@
+name: ml_expressions_v5
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  # --- Core Environment ---
+  - python=3.10
+  - pip
+
+  # --- Core ML & Data Stack ---
+  - pytorch::pytorch=2.2.2
+  - torchvision
+  - numpy=1.26
+  - pandas
+  - scikit-learn
+  - sympy=1.12
+
+  # --- Plotting & Utilities ---
+  - matplotlib
+  - seaborn
+  - tqdm
+  - dill
+  - pillow
+
+  # --- Jupyter Notebook Support ---
+  - ipykernel
+  - ipywidgets
+  - jupyterlab
+
+  # --- Pip-installed packages ---
+  - pip:
+    - transformers==4.40.1
+    - datasets==2.18.0
+    - accelerate==0.29.3
+    - face-recognition
+    - imagehash

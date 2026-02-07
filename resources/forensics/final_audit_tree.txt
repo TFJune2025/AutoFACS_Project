@@ -1,0 +1,255 @@
+.
+├── __init__.py
+├── agents.md
+├── AutoFACS_FSD.md
+├── boot.py
+├── BOOTLOADER.md
+├── configs
+│   ├── __init__.py
+│   ├── config.py
+│   ├── environment_automl.yml
+│   ├── envs
+│   │   ├── 2024_12_24_ml_expressions.yml
+│   │   ├── 2024_12_24_ml_expressions(nobuilds).yml
+│   │   ├── conda_packages.txt
+│   │   ├── environment 2.yml
+│   │   ├── environment.yml
+│   │   ├── img_curation_v3.yml
+│   │   ├── ml_expr_face_env.yml
+│   │   ├── ml_expressions_env.yml
+│   │   ├── ml_expressions_locked.txt
+│   │   ├── ml_expressions_updated.yml
+│   │   ├── ml_expressions_v5.yml
+│   │   ├── ml_expressions.yml
+│   │   ├── ml_expressions(nobuilds) 2.yml
+│   │   ├── ml_expressions(nobuilds).yml
+│   │   ├── ml_extensor_final.yml
+│   │   ├── ml_extensor_nobuild.yml
+│   │   ├── ml_extensor.yml
+│   │   ├── ml_extorch_final.yml
+│   │   ├── ml_extorch.yml
+│   │   ├── pip_packages 2.txt
+│   │   ├── pip_packages.txt
+│   │   ├── requirements.txt
+│   │   └── stable_environment_requirements.txt
+│   ├── scraper_engine.py
+│   ├── scraper_settings.py
+│   ├── scraping
+│   │   ├── google custom search engine info 2.rtf
+│   │   └── google custom search engine info.rtf
+│   └── settings.py
+├── DATA_LAKE_MANIFEST_V41.csv
+├── final_audit_tree.txt
+├── final_clean_tree.txt
+├── logs
+│   ├── __init__.py
+│   ├── autofacs_20260127.log
+│   ├── error_log.txt
+│   ├── events.out.tfevents.1740755916.ml-expressions.78405.0
+│   ├── events.out.tfevents.1740759304.ml-expressions.114273.0
+│   ├── events.out.tfevents.1745689342.104-171-202-65.2098.0
+│   ├── log 2.txt
+│   ├── log.txt
+│   ├── process_summary 2.log
+│   ├── process_summary.log
+│   ├── processed_files_log.json
+│   ├── skipped_files 2.log
+│   ├── skipped_files.log
+│   ├── unmatched_files.log
+│   └── V40_full_inference_log.csv
+├── main.py
+├── Makefile
+├── notebooks
+│   ├── analysis
+│   │   ├── compare_folders.ipynb
+│   │   ├── img_class_distro_2025_01_26.ipynb
+│   │   ├── img_count_compare2025_01_19.ipynb
+│   │   ├── img_pixelct_2025_02_04.ipynb
+│   │   ├── inspect_celeba_preds_2025_05_31.ipynb
+│   │   ├── label_comparison_review_2025_10_10.ipynb
+│   │   └── V29_emotional_detector.ipynb
+│   ├── curation
+│   │   ├── 7z_files_extrac_2025_01_11.ipynb
+│   │   ├── 7z_files_moving_2025_01_11.ipynb
+│   │   ├── adv_CNN_2025_01_28.ipynb
+│   │   ├── auto_file_naming_2025_09_15.ipynb
+│   │   ├── celeba_sorting_2025_05_30.ipynb
+│   │   ├── copy_files_2025_01_26.ipynb
+│   │   ├── copy_folder_2025_01_20.ipynb
+│   │   ├── curation_age_2025_09_15.ipynb
+│   │   ├── curation_helper_2025_07_17.ipynb
+│   │   ├── data_augment_2025_01_26.ipynb
+│   │   ├── data_creation_tool_2025_07_28.ipynb
+│   │   ├── dataset_cleanup_2025_04_16.ipynb
+│   │   ├── dataset_curation_2025_10_14.ipynb
+│   │   ├── datasets_curation_2025_03_24.ipynb
+│   │   ├── delete_all_files_2025_01_26.ipynb
+│   │   ├── delete_files_2025_01_12.ipynb
+│   │   ├── delete_trash_2025_01_11.ipynb
+│   │   ├── disgust_sort_2025_04_14.ipynb
+│   │   ├── fake_img_removal_2025_04_17.ipynb
+│   │   ├── folder_contents_2026_01_17.ipynb
+│   │   ├── folder_moving_2025_01_16.ipynb
+│   │   ├── folder_split_2025_01_14.ipynb
+│   │   ├── gatekeeper_dataset_2025_07_25.ipynb
+│   │   ├── img_autosorting_2025_01_14.ipynb
+│   │   ├── img_compare_ML_2025_02_02.ipynb
+│   │   ├── img_cur_adv_2025_01_20.ipynb
+│   │   ├── img_curation_2025_01_17.ipynb
+│   │   ├── img_curation_face_2025_01_28.ipynb
+│   │   ├── img_curation_gem_2025_10_18.ipynb
+│   │   ├── img_curation_gpt_2025_10_18.ipynb
+│   │   ├── img_filter_2025_01_09.ipynb
+│   │   ├── img_moving_2025_01_13.ipynb
+│   │   ├── img_org_emotions_2025_01_26.ipynb
+│   │   ├── img_random_selection_2025_01_09.ipynb
+│   │   ├── img_sorting_2025_01_20.ipynb
+│   │   ├── img_sorting_back_2025_01_14.ipynb
+│   │   ├── img_zip_extract_2025_01_09.ipynb
+│   │   ├── lgimg_curation_2025_01_15.ipynb
+│   │   ├── manual_curation_notes.txt
+│   │   ├── mine_hard_negs_2025_10_20.ipynb
+│   │   ├── mine_speech_action_errors_2025_10_20.ipynb
+│   │   ├── move_files_2025_02_01.ipynb
+│   │   ├── move_folder_2025_01_16.ipynb
+│   │   ├── neutral_expr_2025_10_03.ipynb
+│   │   ├── neutral_expr_gen_2025_09_29.ipynb
+│   │   ├── pexels_gem_rescue_2025_10_18.ipynb
+│   │   ├── pexels_gpt_rescue_2025_10_18.ipynb
+│   │   ├── remove_dupes_2025_09_30.ipynb
+│   │   ├── rename_img_files_2025_09_24.ipynb
+│   │   ├── review_img_shortlist_2025_10_10.ipynb
+│   │   ├── sort_imgs_back_2025_01_27.ipynb
+│   │   ├── splitting_folders_2025_01_13.ipynb
+│   │   ├── to_grayscale_2025_01_21.ipynb
+│   │   ├── train_test_split_folders_2025_02_06.ipynb
+│   │   ├── V16_unsup_img_sort_2025_06_05.ipynb
+│   │   ├── V18_img_sort_2025_06_26.ipynb
+│   │   └── V41_curation_triage_2025_11_02.ipynb
+│   ├── flywheel
+│   │   ├── V1_20250711_090229_basicvidtest.ipynb
+│   │   ├── V10_20250729_114729_analyzer.ipynb
+│   │   ├── V10_20250729_114729_producer_gatekeep.ipynb
+│   │   ├── V2_20250711_114129_analyzer.ipynb
+│   │   ├── V2_20250711_114129_basicvidtest.ipynb
+│   │   ├── V3_20250714_093845_analyzer.ipynb
+│   │   ├── V3_20250714_093845_data_diagnostic.ipynb
+│   │   ├── V3_20250714_093845_producer_wfilter.ipynb
+│   │   ├── V4_20250715_133251_analyzer.ipynb
+│   │   ├── V4_20250715_133251_producer_wfilter.ipynb
+│   │   ├── V5_20250715_141530_analyzer.ipynb
+│   │   ├── V5_20250715_141530_producer_wfilter.ipynb
+│   │   ├── V6_20250716_112248_analyzer.ipynb
+│   │   ├── V6_20250716_112248_producer_wfilter.ipynb
+│   │   ├── V6_20250716_112248_vid_review.ipynb
+│   │   ├── V7_20250717_093451_basicvidtest.ipynb
+│   │   ├── V7_20250717_093451_producer.ipynb
+│   │   ├── V7_20250717_122112_analyzer.ipynb
+│   │   ├── V7_20250717_122112_producer_wfilter.ipynb
+│   │   ├── V8_20250722_130942_analyzer.ipynb
+│   │   ├── V8_20250722_130942_producer_gatekeep.ipynb
+│   │   ├── V9_20250725_154347_analyzer.ipynb
+│   │   └── V9_20250725_154347_producer_gatekeep.ipynb
+│   ├── inference
+│   │   ├── generate_synthetic_speech_2025_08_08.ipynb
+│   │   ├── img_random_selection_2025_01_09.ipynb
+│   │   ├── Inference_log_automation_2026_01_02.ipynb
+│   │   └── pexels_sorting_2025_10_15.ipynb
+│   ├── scraping
+│   │   ├── beautiful_soup_2024_12_30.ipynb
+│   │   ├── flickr_img_api_2025_09_25.ipynb
+│   │   ├── img_google_api_2024_12_30.ipynb
+│   │   ├── img_wikimedia_api_2025_01_17.ipynb
+│   │   ├── pexels_img_api_2025_09_25.ipynb
+│   │   ├── pexels_randimg_2025_05-31.ipynb
+│   │   └── reddit_img_api_2025_04_17.ipynb
+│   ├── setup
+│   └── training
+│       ├── gatekeeper
+│       ├── supervised
+│       └── unsupervised
+├── repo_structure.txt
+├── repo_tree.txt
+├── resources
+│   ├── docs
+│   │   ├── gcloud critical commands.rtf
+│   │   ├── gcloud storage commands.rtf
+│   │   ├── jupyter lab (gcloud) commands 2.rtf
+│   │   ├── jupyter lab (gcloud) commands.rtf
+│   │   ├── literature.txt
+│   │   ├── terminal_commands.txt
+│   │   └── THE EXPRESSION OF THE EMOTIONS IN MAN AND ANIMALS  By Charles Darwin  .docx
+│   └── infrastructure
+│       └── linux_drivers
+├── server_side_organize.sh
+├── signal_tree.txt
+├── simplified_tree.txt
+├── src
+│   ├── __init__.py
+│   ├── agent
+│   │   ├── __init__.py
+│   │   ├── agent_architect.py
+│   │   └── master_orchestrator.py
+│   ├── analytics.py
+│   ├── architecture.py
+│   ├── discovery
+│   │   └── lake_scanner.py
+│   ├── inference_core.py
+│   ├── inference.py
+│   ├── list_models.py
+│   ├── logic_gate.py
+│   ├── modeling.py
+│   ├── scheduler.py
+│   ├── synthesis
+│   ├── test_brain.py
+│   ├── video_engine.py
+│   └── vision_utils.py
+├── system_metaprompt.txt
+├── tests
+│   ├── inference_test.py
+│   ├── integrity_check.py
+│   ├── smoke_test.py
+│   └── weight_alignment.py
+├── tools
+│   ├── __init__.py
+│   ├── active_tool.py
+│   ├── autofacs_model_engine.py
+│   ├── bulk_migrator.py
+│   ├── face_recognition_tool.py
+│   ├── face_recognition.py
+│   ├── face_scout.py
+│   ├── golden_schema_executor.py
+│   └── inference_specialist_current.py
+├── v40_v41_locations.txt
+├── verify_phase1.py
+└── wandb
+    ├── debug-internal.log -> run-20260127_180146-bpk6uxkj/logs/debug-internal.log
+    ├── debug.log -> run-20260127_180146-bpk6uxkj/logs/debug.log
+    ├── latest-run -> run-20260127_180146-bpk6uxkj
+    ├── run-20260127_163423-elkg5ncn
+    │   ├── files
+    │   ├── logs
+    │   ├── run-elkg5ncn.wandb
+    │   └── tmp
+    ├── run-20260127_163752-le9ihuq9
+    │   ├── files
+    │   ├── logs
+    │   ├── run-le9ihuq9.wandb
+    │   └── tmp
+    ├── run-20260127_164149-rctmvyro
+    │   ├── files
+    │   ├── logs
+    │   ├── run-rctmvyro.wandb
+    │   └── tmp
+    ├── run-20260127_164228-ow8eenvg
+    │   ├── files
+    │   ├── logs
+    │   ├── run-ow8eenvg.wandb
+    │   └── tmp
+    └── run-20260127_180146-bpk6uxkj
+        ├── files
+        ├── logs
+        ├── run-bpk6uxkj.wandb
+        └── tmp
+
+48 directories, 205 files

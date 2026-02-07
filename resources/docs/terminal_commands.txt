@@ -1,0 +1,117 @@
+# ---------------------------------------------------------
+# PHASE 1: CONNECTION (The Tunnel)
+# ---------------------------------------------------------
+
+# 0. Check if the tunnel is already alive
+ls -F /Users/natalyagrokh/AutoFACS_Project/data_lake/
+
+# 1. Kill any ghost processes (Clean Slate)
+killall -9 rclone 2>/dev/null
+
+# 2. Ensure the local mount point exists
+mkdir -p /Users/natalyagrokh/AutoFACS_Project/data_lake
+
+# [Break Glass aka Refresh token] Only run this if you get "invalid_grant" or Auth errors
+# rclone config reconnect gdrive:
+
+# 3. Mount the Drive (Background Daemon Mode)
+# This maps 'gdrive:' root to your local 'data_lake' folder
+rclone mount gdrive: /Users/natalyagrokh/AutoFACS_Project/data_lake --vfs-cache-mode full --vfs-cache-max-age 24h --dir-cache-time 1m --attr-timeout 10s --daemon
+
+# 4. Verify the Tunnel (Should verify 'AutoAI_Projects' exists)
+ls -F /Users/natalyagrokh/AutoFACS_Project/data_lake/
+
+# 5. Run Smoke Test (Verifies Local Code + Data Access)
+python smoke_test.py
+
+# ---------------------------------------------------------
+# PHASE 2: DATA OPS (Direct Cloud Transfer)
+# ---------------------------------------------------------
+
+# 6. DRY RUN: Check for missing files (Local -> Cloud)
+# Note: Using direct 'gdrive:' path is faster than copying to the mount point.
+# Target: We map local 'AI' to the cloud project folder directly.
+rclone check /Users/natalyagrokh/AI gdrive:AutoAI_Projects/AutoFACS_Project --missing-on-dst missing_files.txt --one-way
+
+# 7. EXECUTE: Upload Data (Local -> Cloud)
+# Flags: -P (Progress), --transfers 8 (Speed up), --ignore-existing (Save bandwidth)
+rclone copy /Users/natalyagrokh/AI gdrive:AutoAI_Projects/AutoFACS_Project --copy-links --ignore-existing -P --transfers 8
+
+
+# ---------------------------------------------------------
+# PHASE 3: Creating repo trees
+# ---------------------------------------------------------
+# 1. Tree Version
+tree --version
+
+# 2.  Snapshot your local working repo
+cd ~/AI/autofacs_agent_repo   # or wherever it lives
+tree -a -L 5 > repo_tree.txt
+
+# 3. Snapshot your FREEZE archive (lightweight)
+cd /Volumes/JavaAOT
+tree -d -L 4 "AutoFACS_FREEZE_2024_12 - 2026_01" > freeze_tree.txt
+
+# 4. Snapshot your Golden Schema staging
+cd ~/AI/autofacs_agent_repo
+tree -a -L 6 Organized_Staging > golden_tree.txt
+
+
+# ---------------------------------------------------------
+# PHASE 4: Comparing tar.gz with unzipped same title files
+# ---------------------------------------------------------
+# 1. Compare sizes
+du -sh '/Volumes/JavaAOT/AutoFACS_FREEZE_2024_12 - 2026_01 copy/00_raw_data/images/celeba_dataset'
+du -sh '/Volumes/JavaAOT/AutoFACS_FREEZE_2024_12 - 2026_01 copy/00_raw_data/images/celeba_dataset.tar.gz'
+
+# 2. Spot-check contents
+tar -tf Dataset_X.tar.gz | head
+
+# 3. Hash a file
+shasum Dataset_X/images/img001.jpg
+tar -xOf Dataset_X.tar.gz Dataset_X/images/img001.jpg | shasum
+
+
+# ---------------------------------------------------------
+# PHASE 5: Cleaning trash and ghost files
+# ---------------------------------------------------------
+
+#1. Check for the hidden Trash folder on the drive
+du -sh /Volumes/JavaAOT/.Trashes
+
+#2. List all hidden folders to see what's eating space
+ls -la /Volumes/JavaAOT
+
+#3. Force-empty the external Trash
+sudo rm -rf /Volumes/JavaAOT/.Trashes/*
+
+#4. Check the "True" Free Space
+df -h /Volumes/JavaAOT
+
+#5. Checking for other "Ghost" Culprits
+sudo du -sh /Volumes/JavaAOT/.* /Volumes/JavaAOT/* | sort -rh | head -n 10
+
+#6. Verification Checklist
+To be absolutely sure nothing is "ghosting," run this one command to find the top 5 largest folders on the whole drive:
+sudo du -sh /Volumes/JavaAOT/* 2>/dev/null | sort -rh | head -n 5
+
+#7. Delete the "Hidden Junk":
+find "/Volumes/JavaAOT/AutoFACS_FREEZE_2024_12 - 2026_01 copy" -name ".DS_Store" -delete
+find "/Volumes/JavaAOT/AutoFACS_FREEZE_2024_12 - 2026_01 copy" -name "__MACOSX" -type d -exec rm -rf {} +
+find . -name ".DS_Store" -delete
+
+#8. The "Dot-Clean" Method macOS sometimes holds onto "deleted" blocks because of indexing. Run this to tell the OS to finalize those deletions:
+dot_clean -v /Volumes/JavaAOT/
+
+
+# ---------------------------------------------------------
+# PHASE 5: Migrating to Cloud
+# ---------------------------------------------------------
+
+#1. Migrating a tar ball to Google Drive:
+rclone copy "/Volumes/JavaAOT/AutoFACS_Freeze_Final.tar" "gdrive:AutoAI_Projects/AutoFACS_Project" \
+  --progress \
+  --transfers 1 \
+  --multi-thread-streams 8 \
+  --multi-thread-cutoff 250M \
+  --drive-chunk-size 128M
