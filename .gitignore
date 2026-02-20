@@ -1,19 +1,25 @@
-data_lake/Research_Archive/
+# --- Project Structural Ignores ---
+.env
+configs/settings_local.py
+__pycache__/
+logs/
+wandb/
+
+# --- System Junk ---
+.DS_Store
+._*
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Data Lake & Mounts (Total Barrier) ---
 gdrive/
 data/
 models/
-._*
-.DS_Store
-__pycache__/
-logs/
-.env
-# Ignore all files in data_lake
-data_lake/*
-# But allow python scripts
-!data_lake/**/*.py
-# Block all heavy data everywhere
+data_lake/
+data_lake/Research_Archive/
+
+# --- Heavy Asset Blocklist (Global) ---
 *.mp4
-*.csv
 *.tiff
 *.tif
 *.png
@@ -21,20 +27,12 @@ data_lake/*
 *.jpeg
 *.pth
 *.onnx
+*.tar.*
+*.aa
+*.zip
 
-configs/settings_local.py
-.env
-
-# Local/System Files
-wandb/
-.DS_Store
-DATA_LAKE_MANIFEST_V41.csv
-data_lake/Research_Archive/
-manifests/inventories/DATA_LAKE_MANIFEST_V41.csv
-manifests/inventories/DATA_LAKE_MANIFEST_V41.csv
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/*
-
-# Ignore all Manifest CSVs regardless of version
+# --- Manifest & Inventory Blocklist (The 100MB Shield) ---
 *_MANIFEST_*.csv
 manifests/inventories/*.csv
+resources/forensics/*.txt
+resources/forensics/*.zip
